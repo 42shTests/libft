@@ -6,7 +6,7 @@
 #    By: anouvel <adrien.nouvel@outlook.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/30 19:03:39 by anouvel           #+#    #+#              #
-#    Updated: 2016/04/30 19:03:40 by anouvel          ###   ########.fr        #
+#    Updated: 2016/05/01 16:26:00 by anouvel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_str_/ft_strnequ.c	\
 				ft_str_/ft_strsub.c		\
 				ft_str_/ft_strjoin.c	\
+				ft_str_/ft_strser.c		\
 				ft_str_/ft_strtrim.c	\
 				ft_str_/ft_strsplit.c	\
 				recodes/ft_memset.c		\
@@ -340,6 +341,11 @@ $(DIROBJ)ft_strjoin.o: srcs/ft_str_/ft_strjoin.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_str_/ft_strjoin.c\n"
 		@$(CC) -c ./srcs/ft_str_/ft_strjoin.c -o ./.objs/ft_strjoin.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_strser.o: srcs/ft_str_/ft_strser.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_str_/ft_strser.c\n"
+		@$(CC) -c ./srcs/ft_str_/ft_strser.c -o ./.objs/ft_strser.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_strtrim.o: srcs/ft_str_/ft_strtrim.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"

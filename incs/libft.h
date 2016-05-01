@@ -6,7 +6,7 @@
 /*   By: anouvel <anouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 16:20:37 by anouvel           #+#    #+#             */
-/*   Updated: 2016/02/25 16:46:23 by anouvel          ###   ########.fr       */
+/*   Updated: 2016/05/01 16:25:19 by anouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ char				*ft_strnew(size_t size);
 char				**ft_strsplit(const char *s, char c);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
 char				*ft_strtrim(const char *s);
+char				*ft_strser(const char *s);
 
 /*
 ** Standard libc recoding.
