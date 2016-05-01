@@ -14,27 +14,16 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	unsigned int i1;
-	unsigned int i2;
+	size_t	len2;
 
-	i1 = 0;
-	i2 = 0;
-	if (ft_strcmp(s2, "") == 0)
+	if (*s2 == '\0')
 		return ((char *)s1);
-	while (s1[i1] != '\0' && i1 < n)
+	len2 = ft_strlen(s2);
+	while (*s1 != '\0' && n-- >= len2)
 	{
-		if (s1[i1] == s2[i2])
-		{
-			i1++;
-			i2++;
-			if (i2 == ft_strlen(s2))
-				return (&(((char *)s1)[i1 - i2]));
-		}
-		else
-		{
-			i2 = 0;
-			i1++;
-		}
+		if (*s1 == *s2 && ft_memcmp(s1, s2, len2) == 0)
+			return ((char *)s1);
+		s1++;
 	}
 	return (NULL);
 }

@@ -36,12 +36,12 @@ typedef struct s_list	t_list;
 
 struct				s_list
 {
-	void			*data;
-	size_t			size;
+	void			*content;
+	size_t			content_size;
 	t_list			*next;
 };
 
-t_list				*ft_lstnew(void const *data, size_t size);
+t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
