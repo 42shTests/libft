@@ -26,7 +26,7 @@ static char		*found_str(const char *s, char c, int i)
 		leni++;
 		len++;
 	}
-	str = ft_memalloc(len);
+	str = ft_memalloc(len + 1);
 	j = 0;
 	while (s[i] != '\0' && s[i] != c)
 	{
