@@ -6,7 +6,7 @@
 /*   By: anouvel <anouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 16:22:58 by anouvel           #+#    #+#             */
-/*   Updated: 2016/02/25 16:23:04 by anouvel          ###   ########.fr       */
+/*   Updated: 2016/05/02 13:42:31 by anouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (alst && new)
-	{
-		new->next = *alst;
-		*alst = new;
-	}
+	new->next = *alst;
+	*alst = new;
 }
