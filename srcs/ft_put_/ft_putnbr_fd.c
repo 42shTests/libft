@@ -6,17 +6,17 @@
 /*   By: anouvel <anouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 16:27:57 by anouvel           #+#    #+#             */
-/*   Updated: 2016/02/25 16:33:17 by anouvel          ###   ########.fr       */
+/*   Updated: 2016/05/02 13:47:14 by anouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- ** Display an int in file descriptor.
- ** @param	n		the int to print
- ** @param	fd		the file descriptor
- */
+** Display an int in file descriptor.
+** @param	n		the int to print
+** @param	fd		the file descriptor
+*/
 
 void		ft_putnbr_fd(int n, int fd)
 {
