@@ -6,7 +6,7 @@
 /*   By: anouvel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 14:40:15 by anouvel           #+#    #+#             */
-/*   Updated: 2014/11/10 17:41:57 by anouvel          ###   ########.fr       */
+/*   Updated: 2016/05/02 13:45:12 by anouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i2 = -1;
 	if (s1 && s2)
 	{
-		str = ft_memalloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-		if (!str)
+		if (!(str = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
 			return (NULL);
 		else
 		{
