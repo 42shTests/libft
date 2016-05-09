@@ -6,7 +6,7 @@
 /*   By: anouvel <anouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 16:20:37 by anouvel           #+#    #+#             */
-/*   Updated: 2016/05/02 13:36:15 by anouvel          ###   ########.fr       */
+/*   Updated: 2016/05/09 19:34:49 by anouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,26 +27,6 @@ typedef enum		e_bool
 */
 
 char				*ft_itoa(int n);
-
-/*
-** Linked list.
-*/
-
-typedef struct s_list	t_list;
-
-struct				s_list
-{
-	void			*content;
-	size_t			content_size;
-	t_list			*next;
-};
-
-t_list				*ft_lstnew(void const *content, size_t content_size);
-void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
-void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void				ft_lstadd(t_list **alst, t_list *new);
-void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 /*
 ** Memory.

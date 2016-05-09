@@ -1,8 +1,6 @@
 # include "list.h"
 
-void	t__list_add(t_list *new,
-							t_list *prev,
-							t_list *next)
+void	t_list_add(t_list *new, t_list *prev, t_list *next)
 {
 	next->prev = new;
 	new->next = next;
@@ -12,10 +10,10 @@ void	t__list_add(t_list *new,
 
 void	list_add(t_list *new, t_list *head)
 {
-	t__list_add(new, head, head->next);
+	t_list_add(new, head, head->next);
 }
 
 void	list_add_tail(t_list *new, t_list *head)
 {
-	t__list_add(new, head->prev, head);
+	t_list_add(new, head->prev, head);
 }

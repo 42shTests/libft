@@ -6,7 +6,7 @@
 #    By: anouvel <adrien.nouvel@outlook.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/30 19:03:39 by anouvel           #+#    #+#              #
-#    Updated: 2016/05/09 19:06:45 by anouvel          ###   ########.fr        #
+#    Updated: 2016/05/09 19:35:05 by anouvel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,12 +20,6 @@ NAME		=	libft.a
 
 SRCS		=	ft_get_/get_next_line.c	\
 				ft_ito_/ft_itoa.c		\
-				ft_lst_/ft_lstnew.c		\
-				ft_lst_/ft_lstdelone.c	\
-				ft_lst_/ft_lstdel.c		\
-				ft_lst_/ft_lstadd.c		\
-				ft_lst_/ft_lstiter.c	\
-				ft_lst_/ft_lstmap.c		\
 				ft_mem_/ft_memalloc.c	\
 				ft_mem_/ft_memdel.c		\
 				ft_put_/ft_putchar.c	\
@@ -215,36 +209,6 @@ $(DIROBJ)ft_itoa.o: srcs/ft_ito_/ft_itoa.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_ito_/ft_itoa.c\n"
 		@$(CC) -c ./srcs/ft_ito_/ft_itoa.c -o ./.objs/ft_itoa.o $(CPPFLAGS) $(CFLAGS) 
-
-$(DIROBJ)ft_lstnew.o: srcs/ft_lst_/ft_lstnew.c incs/libft.h
-		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/ft_lstnew.c\n"
-		@$(CC) -c ./srcs/ft_lst_/ft_lstnew.c -o ./.objs/ft_lstnew.o $(CPPFLAGS) $(CFLAGS) 
-
-$(DIROBJ)ft_lstdelone.o: srcs/ft_lst_/ft_lstdelone.c incs/libft.h
-		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/ft_lstdelone.c\n"
-		@$(CC) -c ./srcs/ft_lst_/ft_lstdelone.c -o ./.objs/ft_lstdelone.o $(CPPFLAGS) $(CFLAGS) 
-
-$(DIROBJ)ft_lstdel.o: srcs/ft_lst_/ft_lstdel.c incs/libft.h
-		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/ft_lstdel.c\n"
-		@$(CC) -c ./srcs/ft_lst_/ft_lstdel.c -o ./.objs/ft_lstdel.o $(CPPFLAGS) $(CFLAGS) 
-
-$(DIROBJ)ft_lstadd.o: srcs/ft_lst_/ft_lstadd.c incs/libft.h
-		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/ft_lstadd.c\n"
-		@$(CC) -c ./srcs/ft_lst_/ft_lstadd.c -o ./.objs/ft_lstadd.o $(CPPFLAGS) $(CFLAGS) 
-
-$(DIROBJ)ft_lstiter.o: srcs/ft_lst_/ft_lstiter.c incs/libft.h
-		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/ft_lstiter.c\n"
-		@$(CC) -c ./srcs/ft_lst_/ft_lstiter.c -o ./.objs/ft_lstiter.o $(CPPFLAGS) $(CFLAGS) 
-
-$(DIROBJ)ft_lstmap.o: srcs/ft_lst_/ft_lstmap.c incs/libft.h
-		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/ft_lstmap.c\n"
-		@$(CC) -c ./srcs/ft_lst_/ft_lstmap.c -o ./.objs/ft_lstmap.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_memalloc.o: srcs/ft_mem_/ft_memalloc.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"

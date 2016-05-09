@@ -1,6 +1,6 @@
 # include "list.h"
 
-void	t__list_splice(t_list *list, t_list *head)
+void	t_list_splice(t_list *list, t_list *head)
 {
 	t_list	*first;
 	t_list	*last;
@@ -19,7 +19,7 @@ void	list_splice(t_list *list, t_list *head)
 {
 	if (!list_empty(list))
 	{
-		t__list_splice(list, head);
+		t_list_splice(list, head);
 		INIT_LIST_HEAD(list);
 	}
 }
