@@ -67,7 +67,7 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_lst_/list/srcs/list_del.c			\
 				ft_lst_/list/srcs/list_is_empty.c		\
 				ft_lst_/list/srcs/list_insert.c		\
-				ft_lst_/list/srcs/list_len.c		\
+				ft_lst_/list/srcs/list_size.c			\
 				ft_lst_/list/srcs/list_move.c		\
 				ft_lst_/list/srcs/list_nth.c		\
 				ft_lst_/list/srcs/list_slice.c		\
@@ -496,10 +496,10 @@ $(DIROBJ)list_insert.o: srcs/ft_lst_/list/srcs/list_insert.c incs/list.h
 		@printf "compiling ./srcs/ft_lst_/list/srcs/list_insert.c\n"
 		@$(CC) -c ./srcs/ft_lst_/list/srcs/list_insert.c -o ./.objs/list_insert.o $(CPPFLAGS) $(CFLAGS) 
 
-$(DIROBJ)list_len.o: srcs/ft_lst_/list/srcs/list_len.c incs/list.h
+$(DIROBJ)list_size.o: srcs/ft_lst_/list/srcs/list_size.c incs/list.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/list/srcs/list_len.c\n"
-		@$(CC) -c ./srcs/ft_lst_/list/srcs/list_len.c -o ./.objs/list_len.o $(CPPFLAGS) $(CFLAGS) 
+		@printf "compiling ./srcs/ft_lst_/list/srcs/list_size.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list/srcs/list_size.c -o ./.objs/list_size.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)list_move.o: srcs/ft_lst_/list/srcs/list_move.c incs/list.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"

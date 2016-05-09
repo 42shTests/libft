@@ -65,7 +65,7 @@ extern int		list_is_empty(t_list *head);
 /*
 ** list len: return the length of the list
 */
-extern int		list_len (t_list *head);
+extern int		list_size(t_list *head);
 
 /*
 ** list splice: concatenate two lists
