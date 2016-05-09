@@ -6,7 +6,7 @@
 #    By: anouvel <adrien.nouvel@outlook.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/30 19:03:39 by anouvel           #+#    #+#              #
-#    Updated: 2016/05/09 19:45:42 by anouvel          ###   ########.fr        #
+#    Updated: 2016/05/09 19:47:37 by anouvel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,9 +73,10 @@ SRCS		=	ft_get_/get_next_line.c	\
 				recodes/ft_toupper.c	\
 				recodes/ft_tolower.c	\
 				ft_lst_/list/srcs/t_list/t_list_add.c	\
+				ft_lst_/list/srcs/t_list/t_list_del.c	\
 				ft_lst_/list/srcs/list_push_front.c		\
 				ft_lst_/list/srcs/list_push_back.c		\
-				ft_lst_/list/srcs/list_del.c		\
+				ft_lst_/list/srcs/list_del.c			\
 				ft_lst_/list/srcs/list_empty.c		\
 				ft_lst_/list/srcs/list_insert.c		\
 				ft_lst_/list/srcs/list_len.c		\
@@ -476,6 +477,11 @@ $(DIROBJ)t_list_add.o: srcs/ft_lst_/list/srcs/t_list/t_list_add.c incs/list.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_lst_/list/srcs/t_list/t_list_add.c\n"
 		@$(CC) -c ./srcs/ft_lst_/list/srcs/t_list/t_list_add.c -o ./.objs/t_list_add.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)t_list_del.o: srcs/ft_lst_/list/srcs/t_list/t_list_del.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list/srcs/t_list/t_list_del.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list/srcs/t_list/t_list_del.c -o ./.objs/t_list_del.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)list_push_front.o: srcs/ft_lst_/list/srcs/list_push_front.c incs/list.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
