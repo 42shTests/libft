@@ -45,9 +45,9 @@ int main()
 		INIT_LIST_HEAD (&nodes[ i ].list);
 		nodes[ i ].value = i;
 
-		//	printf ("add tail %d\n", i);
+		printf ("add tail %d\n", i);
 
-		list_add_tail (&nodes[ i ].list, &list);
+		list_push_back(&nodes[ i ].list, &list);
 		list_size ++;
 	}
 

@@ -1,6 +1,9 @@
 #ifndef LIST_H
 # define LIST_H
 
+# undef OFFSETOF
+# define OFFSETOF(type, member) ((size_t) &((type *)0)->member)
+
 /*
 ** Casts a member of a structure out to the containing structure
 ** @param p: ptr		the pointer to the member.
@@ -9,7 +12,9 @@
 */
 
 # undef CONTAINER_OF
-# define CONTAINER_OF(p,t,m) ((t*)(((char*)(p))-((char*)(&((t*)-1)->m))))
+#define CONTAINER_OF(ptr, type, member) ({   		              \
+		const typeof( ((type *)0)->member ) *__mptr = (ptr); 	   \
+		(type *)( (char *)__mptr - OFFSETOF(type,member) );})
 
 /*
 ** Double linked list implementation
