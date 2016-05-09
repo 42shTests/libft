@@ -1,6 +1,6 @@
-# include "list.h"
+#include "list.h"
 
-int			list_len(t_list *head)
+int	list_len(t_list *head)
 {
 	t_list	*pos;
 	int		ret;

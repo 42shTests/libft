@@ -1,6 +1,6 @@
-# include "list.h"
+#include "list.h"
 
-t_list		*list_nth(const t_list *head, const int index)
+t_list	*list_nth(const t_list *head, const int index)
 {
 	t_list		*tmp;
 	int			i;
