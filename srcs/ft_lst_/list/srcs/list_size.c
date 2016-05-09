@@ -1,6 +1,6 @@
 #include "list.h"
 
-int	list_size(t_list *head)
+size_t	list_size(t_list *head)
 {
 	t_list	*pos;
 	int		ret;

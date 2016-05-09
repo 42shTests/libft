@@ -1,6 +1,8 @@
 #ifndef LIST_H
 # define LIST_H
 
+# include <stddef.h>
+
 # undef OFFSETOF
 # define OFFSETOF(type, member) ((size_t) &((type *)0)->member)
 
@@ -44,52 +46,57 @@ void				t_list_splice(t_list *list, t_list *head);
 # define INIT_LIST_HEAD(ptr) (ptr)->next = (ptr); (ptr)->prev = (ptr);
 
 /*
-** list add: add an element to the list
+** Add the node new at the begining of the list pointed by head.
 */
-extern void			list_push_front(t_list *new, t_list *head);
-extern void			list_push_back(t_list *new, t_list *head);
+void		list_push_front(t_list *new, t_list *head);
 
 /*
-** list del: delete an element from the list
+** Add the node new at the end of the list pointed by head.
 */
-extern void			list_del(t_list *entry);
+void		list_push_back(t_list *new, t_list *head);
+
+/*
+** Delete the list pointed by entry.
+*/
+void		list_del(t_list *entry);
 
 /*
 ** list move: move an element from one list to another
+** TODO check if it is necessary
 */
-extern void		list_move(t_list *list, t_list *head);
-extern void		list_move_tail(t_list *list, t_list *head);
+
+void		list_move(t_list *list, t_list *head);
+void		list_move_tail(t_list *list, t_list *head);
 
 /*
-** check if list is empty
+** Check if the list pointed by head is empty.
 */
-extern int			list_is_empty(t_list *head);
+int			list_is_empty(t_list *head);
 
 /*
-** list len: return the length of the list
+** Get the length of the list pointed by head.
 */
-extern int			list_size(t_list *head);
+size_t		list_size(t_list *head);
 
 /*
-** list splice: concatenate two lists
+** Concatenate the list pointed by list at the begining of the list head.
 */
-extern void			list_splice(t_list *list, t_list *head);
+void		list_splice(t_list *list, t_list *head);
 
 /*
-** list nth: return the nth element of a list
+** Get the nth node of the list pointed by head.
 */
-extern t_list	*list_nth (const t_list *head, const int index);
+t_list		*list_nth(const t_list *head, const int index);
 
 /*
 ** list slice: get a part of a list
 */
-extern t_list		*list_slice(t_list *new, t_list *head,
-		const int index, int len);
+t_list		*list_slice(t_list *new, t_list *head, const int index, int len);
 
 /*
 ** list insert
 */
-extern void		list_insert(t_list *new, t_list *head, unsigned int index);
+void		list_insert(t_list *new, t_list *head, unsigned int index);
 
 /*
 ** list foreach: iterate through element of a list
