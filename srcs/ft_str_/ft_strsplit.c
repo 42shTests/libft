@@ -6,14 +6,14 @@
 /*   By: anouvel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 15:47:51 by anouvel           #+#    #+#             */
-/*   Updated: 2016/05/09 21:08:30 by abombard         ###   ########.fr       */
+/*   Updated: 2016/05/09 21:17:51 by abombard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static int	get_next_entry(char *s, char c, size_t *begin, size_t *size)
+static int		get_next_entry(char *s, char c, size_t *begin, size_t *size)
 {
 	*begin = 0;
 	*size = 0;
@@ -74,8 +74,8 @@ static int		fill_array(char *s, char c, char **array)
 char			**ft_strsplit(char const *s, char c)
 {
 	size_t	entry_count;
-	char	**array;	
-	
+	char	**array;
+
 	if (s == NULL)
 		return (NULL);
 	entry_count = compute_entry_count((char *)s, c);

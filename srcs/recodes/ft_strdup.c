@@ -6,7 +6,7 @@
 /*   By: anouvel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 13:33:10 by anouvel           #+#    #+#             */
-/*   Updated: 2016/05/09 19:26:34 by abombard         ###   ########.fr       */
+/*   Updated: 2016/05/09 21:14:37 by abombard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strdup(const char *s1)
 {
 	size_t	str_size;
-	char 	*str;
+	char	*str;
 
 	if (s1 == NULL)
 		return (NULL);
