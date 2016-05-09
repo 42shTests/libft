@@ -23,7 +23,7 @@ typedef struct		s_list
 
 void	t_list_add (t_list *new, t_list *prev, t_list *next);
 
-void	t__list_del(t_list *prev, t_list *next);
+void	t_list_del(t_list *prev, t_list *next);
 void	t_list_del_init(t_list *entry);
 
 // maybe delete
