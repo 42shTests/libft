@@ -21,19 +21,17 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-void	t_list_add (t_list *new, t_list *prev, t_list *next);
+void				t_list_add(t_list *new, t_list *prev, t_list *next);
 
-void	t_list_del(t_list *prev, t_list *next);
-void	t_list_del_init(t_list *entry);
+void				t_list_del(t_list *prev, t_list *next);
+void				t_list_del_init(t_list *entry);
 
-// maybe delete
-void	t_list_splice(t_list *list, t_list *head);
-void	t_list_splice_init(t_list *list, t_list *head);
-
+void				t_list_splice(t_list *list, t_list *head);
 
 /*
 ** Initialize list
 */
+
 # define LIST_HEAD_INIT(name) { &(name), &(name) }
 
 # define LIST_HEAD(name) t_list	name = LIST_HEAD_INIT(name)
@@ -43,34 +41,34 @@ void	t_list_splice_init(t_list *list, t_list *head);
 /*
 ** list add: add an element to the list
 */
-extern void		list_push_front (t_list *new, t_list *head);
-extern void		list_push_back (t_list *new, t_list *head);
+extern void			list_push_front(t_list *new, t_list *head);
+extern void			list_push_back(t_list *new, t_list *head);
 
 /*
 ** list del: delete an element from the list
 */
-extern void		list_del (t_list *entry);
+extern void			list_del(t_list *entry);
 
 /*
 ** list move: move an element from one list to another
 */
-extern void		list_move (t_list *list, t_list *head);
-extern void		list_move_tail (t_list *list, t_list *head);
+extern void		list_move(t_list *list, t_list *head);
+extern void		list_move_tail(t_list *list, t_list *head);
 
 /*
 ** check if list is empty
 */
-extern int		list_is_empty(t_list *head);
+extern int			list_is_empty(t_list *head);
 
 /*
 ** list len: return the length of the list
 */
-extern int		list_size(t_list *head);
+extern int			list_size(t_list *head);
 
 /*
 ** list splice: concatenate two lists
 */
-extern void		list_splice (t_list *list, t_list *head);
+extern void			list_splice(t_list *list, t_list *head);
 
 /*
 ** list nth: return the nth element of a list
@@ -80,10 +78,8 @@ extern t_list	*list_nth (const t_list *head, const int index);
 /*
 ** list slice: get a part of a list
 */
-extern t_list	*list_slice(t_list		*new,
-							t_list		*head,
-							const int	index,
-							int			len);
+extern t_list		*list_slice(t_list *new, t_list *head,
+		const int index, int len);
 
 /*
 ** list insert

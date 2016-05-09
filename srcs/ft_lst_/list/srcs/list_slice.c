@@ -1,9 +1,6 @@
 #include "list.h"
 
-t_list		*list_slice(t_list *new,
-							t_list *head,
-							const int index,
-							int len)
+t_list	*list_slice(t_list *new, t_list *head, const int index, int len)
 {
 	t_list		*start;
 	t_list		*end;
