@@ -6,7 +6,7 @@
 #    By: anouvel <adrien.nouvel@outlook.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/30 19:03:39 by anouvel           #+#    #+#              #
-#    Updated: 2016/05/09 19:35:05 by anouvel          ###   ########.fr        #
+#    Updated: 2016/05/09 19:45:42 by anouvel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,9 @@ SRCS		=	ft_get_/get_next_line.c	\
 				recodes/ft_isprint.c	\
 				recodes/ft_toupper.c	\
 				recodes/ft_tolower.c	\
-				ft_lst_/list/srcs/list_add.c		\
+				ft_lst_/list/srcs/t_list/t_list_add.c	\
+				ft_lst_/list/srcs/list_push_front.c		\
+				ft_lst_/list/srcs/list_push_back.c		\
 				ft_lst_/list/srcs/list_del.c		\
 				ft_lst_/list/srcs/list_empty.c		\
 				ft_lst_/list/srcs/list_insert.c		\
@@ -470,10 +472,20 @@ $(DIROBJ)ft_tolower.o: srcs/recodes/ft_tolower.c incs/libft.h
 		@printf "compiling ./srcs/recodes/ft_tolower.c\n"
 		@$(CC) -c ./srcs/recodes/ft_tolower.c -o ./.objs/ft_tolower.o $(CPPFLAGS) $(CFLAGS) 
 
-$(DIROBJ)list_add.o: srcs/ft_lst_/list/srcs/list_add.c incs/list.h
+$(DIROBJ)t_list_add.o: srcs/ft_lst_/list/srcs/t_list/t_list_add.c incs/list.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/list/srcs/list_add.c\n"
-		@$(CC) -c ./srcs/ft_lst_/list/srcs/list_add.c -o ./.objs/list_add.o $(CPPFLAGS) $(CFLAGS) 
+		@printf "compiling ./srcs/ft_lst_/list/srcs/t_list/t_list_add.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list/srcs/t_list/t_list_add.c -o ./.objs/t_list_add.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_push_front.o: srcs/ft_lst_/list/srcs/list_push_front.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list/srcs/list_push_front.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list/srcs/list_push_front.c -o ./.objs/list_push_front.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_push_back.o: srcs/ft_lst_/list/srcs/list_push_back.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list/srcs/list_push_back.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list/srcs/list_push_back.c -o ./.objs/list_push_back.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)list_del.o: srcs/ft_lst_/list/srcs/list_del.c incs/list.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"

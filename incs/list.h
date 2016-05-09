@@ -43,8 +43,8 @@ void	t_list_splice_init(t_list *list, t_list *head);
 /*
 ** list add: add an element to the list
 */
-extern void		list_add (t_list *new, t_list *head);
-extern void		list_add_tail (t_list *new, t_list *head);
+extern void		list_push_front (t_list *new, t_list *head);
+extern void		list_push_back (t_list *new, t_list *head);
 
 /*
 ** list del: delete an element from the list

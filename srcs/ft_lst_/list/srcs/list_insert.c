@@ -5,5 +5,5 @@ void	list_insert(t_list *new, t_list *head, unsigned int index)
 	t_list	*pos;
 
 	pos = list_nth(head, index);
-	list_add_tail(new, pos);
+	list_push_back(new, pos);
 }
