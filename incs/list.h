@@ -1,42 +1,35 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   list.h                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: abombard <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/19 14:49:30 by abombard          #+#    #+#             */
-/*   Updated: 2016/05/09 18:11:02 by abombard         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef LIST_H
 # define LIST_H
-
-/*
-** Get offset of a member
-*/
-# undef OFFSETOF
-# define OFFSETOF(type, member) ((size_t) &((type *)0)->member)
 
 /*
 ** Casts a member of a structure out to the containing structure
 ** @param p: ptr		the pointer to the member.
 ** @param t: type		the type of the container struct this is embedded in.
 ** @param m: member		the name of the member within the struct.
-** TEMP: find a way to port the more recent macro from linux headers
 */
+
 # undef CONTAINER_OF
 # define CONTAINER_OF(p,t,m) ((t*)(((char*)(p))-((char*)(&((t*)-1)->m))))
 
 /*
 ** Double linked list implementation
 */
-typedef struct	s_list
+
+typedef struct		s_list
 {
 	struct s_list	*prev;
 	struct s_list	*next;
-}				t_list;
+}					t_list;
+
+void	t_list_add (t_list *new, t_list *prev, t_list *next);
+
+void	t__list_del(t_list *prev, t_list *next);
+void	t_list_del_init(t_list *entry);
+
+// maybe delete
+void	t_list_splice(t_list *list, t_list *head);
+void	t_list_splice_init(t_list *list, t_list *head);
+
 
 /*
 ** Initialize list
@@ -108,5 +101,14 @@ extern void		list_insert(t_list *new, t_list *head, unsigned int index);
 **# define LIST_FOREACH_SAFE(head, pos, save) save=head->next;\
 **		   while((pos=save)&&pos!=head&&(save=save->next))
 */
+
+
+
+
+
+
+
+
+
 
 #endif
