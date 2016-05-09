@@ -6,12 +6,11 @@
 /*   By: anouvel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 15:47:51 by anouvel           #+#    #+#             */
-/*   Updated: 2016/05/09 21:17:51 by abombard         ###   ########.fr       */
+/*   Updated: 2016/05/09 21:21:19 by abombard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int		get_next_entry(char *s, char c, size_t *begin, size_t *size)
 {
