@@ -60,7 +60,7 @@ extern void		list_move_tail (t_list *list, t_list *head);
 /*
 ** check if list is empty
 */
-extern int		list_empty (t_list *head);
+extern int		list_is_empty(t_list *head);
 
 /*
 ** list len: return the length of the list

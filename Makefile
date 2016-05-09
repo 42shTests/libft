@@ -6,7 +6,7 @@
 #    By: anouvel <adrien.nouvel@outlook.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/30 19:03:39 by anouvel           #+#    #+#              #
-#    Updated: 2016/05/09 19:47:37 by anouvel          ###   ########.fr        #
+#    Updated: 2016/05/09 20:03:33 by anouvel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,7 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_lst_/list/srcs/list_push_front.c		\
 				ft_lst_/list/srcs/list_push_back.c		\
 				ft_lst_/list/srcs/list_del.c			\
-				ft_lst_/list/srcs/list_empty.c		\
+				ft_lst_/list/srcs/list_is_empty.c		\
 				ft_lst_/list/srcs/list_insert.c		\
 				ft_lst_/list/srcs/list_len.c		\
 				ft_lst_/list/srcs/list_move.c		\
@@ -498,10 +498,10 @@ $(DIROBJ)list_del.o: srcs/ft_lst_/list/srcs/list_del.c incs/list.h
 		@printf "compiling ./srcs/ft_lst_/list/srcs/list_del.c\n"
 		@$(CC) -c ./srcs/ft_lst_/list/srcs/list_del.c -o ./.objs/list_del.o $(CPPFLAGS) $(CFLAGS) 
 
-$(DIROBJ)list_empty.o: srcs/ft_lst_/list/srcs/list_empty.c incs/list.h
+$(DIROBJ)list_is_empty.o: srcs/ft_lst_/list/srcs/list_is_empty.c incs/list.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/list/srcs/list_empty.c\n"
-		@$(CC) -c ./srcs/ft_lst_/list/srcs/list_empty.c -o ./.objs/list_empty.o $(CPPFLAGS) $(CFLAGS) 
+		@printf "compiling ./srcs/ft_lst_/list/srcs/list_is_empty.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list/srcs/list_is_empty.c -o ./.objs/list_is_empty.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)list_insert.o: srcs/ft_lst_/list/srcs/list_insert.c incs/list.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"

@@ -1,4 +1,4 @@
-# include "list.h"
+#include "list.h"
 
 void	t_list_splice(t_list *list, t_list *head)
 {
@@ -17,7 +17,7 @@ void	t_list_splice(t_list *list, t_list *head)
 
 void	list_splice(t_list *list, t_list *head)
 {
-	if (!list_empty(list))
+	if (!list_is_empty(list))
 	{
 		t_list_splice(list, head);
 		INIT_LIST_HEAD(list);
