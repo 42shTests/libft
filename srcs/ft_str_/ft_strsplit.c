@@ -6,101 +6,84 @@
 /*   By: anouvel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 15:47:51 by anouvel           #+#    #+#             */
-/*   Updated: 2014/11/27 11:52:39 by anouvel          ###   ########.fr       */
+/*   Updated: 2016/05/09 21:08:30 by abombard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-static char		*found_str(const char *s, char c, int i)
+static int	get_next_entry(char *s, char c, size_t *begin, size_t *size)
 {
-	char	*str;
-	int		j;
-	int		leni;
-	int		len;
-
-	leni = i;
-	len = 0;
-	while (s[leni] != '\0' && s[leni] != c)
+	*begin = 0;
+	*size = 0;
+	while (*s && *s == c)
 	{
-		leni++;
-		len++;
+		s++;
+		(*begin)++;
 	}
-	str = ft_memalloc(len + 1);
-	j = 0;
-	while (s[i] != '\0' && s[i] != c)
+	while (*s && *s != c)
 	{
-		str[j] = s[i];
-		j++;
-		i++;
+		s++;
+		(*size)++;
 	}
-	str[i] = '\0';
-	return (str);
+	return (*size ? 1 : 0);
 }
 
-static int		nb_underchain(char const *s, char c)
+static size_t	compute_entry_count(char *s, char c)
 {
-	int		nb;
-	int		i;
-	char	*str;
+	size_t	entry_count;
+	size_t	s_offset;
+	size_t	entry_offset;
+	size_t	entry_size;
 
-	str = (char *)s;
-	nb = 0;
-	i = 0;
-	while (str[i] != '\0')
+	entry_count = 0;
+	s_offset = 0;
+	while (get_next_entry(s + s_offset, c, &entry_offset, &entry_size))
 	{
-		if (str[i] == c)
-			i++;
-		else
-		{
-			nb++;
-			while (str[i] != '\0' && str[i] != (char)c)
-				i++;
-		}
+		s_offset += entry_offset + entry_size;
+		entry_count++;
 	}
-	return (nb);
+	return (entry_count);
 }
 
-static char		**create_tab(const char *s, char c)
+static int		fill_array(char *s, char c, char **array)
 {
-	char **tab;
+	size_t	s_offset;
+	size_t	array_index;
+	char	*entry;
+	size_t	entry_offset;
+	size_t	entry_size;
 
-	tab = (char **)malloc(sizeof(char **) * (nb_underchain(s, c) + 1));
-	if (!tab)
-		return (NULL);
-	else
-		tab[nb_underchain(s, c)] = 0;
-	return (tab);
-}
-
-static void		put_tab(char **tab, int k, char *str, size_t len)
-{
-	tab[k] = ft_memalloc(len + 1);
-	ft_strcpy(tab[k], str);
+	array_index = 0;
+	s_offset = 0;
+	while (get_next_entry(s + s_offset, c, &entry_offset, &entry_size))
+	{
+		entry = (char *)malloc(entry_size + 1);
+		if (!entry)
+			return (0);
+		s_offset += entry_offset;
+		ft_memcpy(entry, s + s_offset, entry_size + 1);
+		s_offset += entry_size;
+		array[array_index] = entry;
+		array_index++;
+	}
+	return (1);
 }
 
 char			**ft_strsplit(char const *s, char c)
 {
-	int		i;
-	int		k;
-	char	**res;
-	char	*str;
-
-	res = create_tab(s, c);
-	i = 0;
-	k = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			i++;
-		else
-		{
-			str = found_str(s, c, i);
-			while (s[i] != '\0' && s[i] != (char)c)
-				i++;
-			put_tab(res, k, str, ft_strlen(str) + 1);
-			k++;
-		}
-	}
-	return (res);
+	size_t	entry_count;
+	char	**array;	
+	
+	if (s == NULL)
+		return (NULL);
+	entry_count = compute_entry_count((char *)s, c);
+	array = malloc(sizeof(char *) * (entry_count + 1));
+	if (!array)
+		return (NULL);
+	array[entry_count] = 0;
+	if (!fill_array((char *)s, c, array))
+		return (NULL);
+	return (array);
 }
