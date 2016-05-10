@@ -1,13 +1,13 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: anouvel <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/06 15:47:51 by anouvel           #+#    #+#             */
-/*   Updated: 2016/05/09 21:21:19 by abombard         ###   ########.fr       */
-/*                                                                            */
+/*																			  */
+/*														  :::	   ::::::::	  */
+/*	 ft_strsplit.c										:+:		 :+:	:+:	  */
+/*													  +:+ +:+		  +:+	  */
+/*	 By: anouvel <marvin@42.fr>						+#+	 +:+	   +#+		  */
+/*												  +#+#+#+#+#+	+#+			  */
+/*	 Created: 2014/11/06 15:47:51 by anouvel		   #+#	  #+#			  */
+/*   Updated: 2016/05/10 17:31:11 by abombard         ###   ########.fr       */
+/*																			  */
 /* ************************************************************************** */
 
 #include "libft.h"
@@ -62,7 +62,8 @@ static int		fill_array(char *s, char c, char **array)
 		if (!entry)
 			return (0);
 		s_offset += entry_offset;
-		ft_memcpy(entry, s + s_offset, entry_size + 1);
+		ft_memcpy(entry, s + s_offset, entry_size);
+		entry[entry_size] = '\0';
 		s_offset += entry_size;
 		array[array_index] = entry;
 		array_index++;
