@@ -4,7 +4,9 @@
 # include <stddef.h>
 
 /*
-** Define the offset a the member m of type t.
+** Define the offset of the member m of type t.
+** @param t: type		the type of the structure
+** @param m: member		the member to get the offset
 */
 
 # undef OFST_OF
@@ -13,6 +15,9 @@
 /*
 ** Cast a member of a structure of type t pointed by ptr and named m out to the
 ** containing structure.
+** @param p: ptr		the pointer to the member
+** @param t: type		the type of the container structure
+** @param m: member		the name of the member
 */
 
 # undef CONTAINER_OF
@@ -22,6 +27,7 @@
 
 /*
 ** Double linked list standard implementation.
+** TODO rename the t_list_* functions
 */
 
 typedef struct s_list	t_list;
@@ -41,6 +47,7 @@ void		t_list_splice(t_list *list, t_list *head);
 
 /*
 ** Initialize list.
+** TODO ask comments and use-cases
 */
 
 # define LIST_HEAD_INIT(name) { &(name), &(name) }
