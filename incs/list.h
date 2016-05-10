@@ -3,40 +3,44 @@
 
 # include <stddef.h>
 
-# undef OFFSETOF
-# define OFFSETOF(type, member) ((size_t) &((type *)0)->member)
+/*
+** Define the offset a the member m of type t.
+*/
+
+# undef OFST_OF
+# define OFST_OF(t, m) ((size_t) &((t *)0)->m)
 
 /*
-** Casts a member of a structure out to the containing structure
-** @param p: ptr		the pointer to the member.
-** @param t: type		the type of the container struct this is embedded in.
-** @param m: member		the name of the member within the struct.
+** Cast a member of a structure of type t pointed by ptr and named m out to the
+** containing structure.
 */
 
 # undef CONTAINER_OF
-#define CONTAINER_OF(ptr, type, member) ({   		              \
-		const typeof( ((type *)0)->member ) *__mptr = (ptr); 	   \
-		(type *)( (char *)__mptr - OFFSETOF(type,member) );})
+# undef TYPE_M
+# define TYPE_M(t,m) const typeof(((t*)0)->m)
+# define CONTAINER_OF(p,t,m)({TYPE_M(t,m)*mp=(p);(t*)((char*)mp-OFST_OF(t,m));})
 
 /*
-** Double linked list implementation
+** Double linked list standard implementation.
 */
 
-typedef struct		s_list
+typedef struct s_list	t_list;
+
+struct		s_list
 {
-	struct s_list	*prev;
-	struct s_list	*next;
-}					t_list;
+	t_list	*prev;
+	t_list	*next;
+};
 
-void				t_list_add(t_list *new, t_list *prev, t_list *next);
+void		t_list_add(t_list *new, t_list *prev, t_list *next);
 
-void				t_list_del(t_list *prev, t_list *next);
-void				t_list_del_init(t_list *entry);
+void		t_list_del(t_list *prev, t_list *next);
+void		t_list_del_init(t_list *entry);
 
-void				t_list_splice(t_list *list, t_list *head);
+void		t_list_splice(t_list *list, t_list *head);
 
 /*
-** Initialize list
+** Initialize list.
 */
 
 # define LIST_HEAD_INIT(name) { &(name), &(name) }
@@ -61,8 +65,7 @@ void		list_push_back(t_list *new, t_list *head);
 void		list_del(t_list *entry);
 
 /*
-** list move: move an element from one list to another
-** TODO check if it is necessary
+** Move the element pointed by list to head.
 */
 
 void		list_move(t_list *list, t_list *head);
@@ -104,19 +107,5 @@ void		list_insert(t_list *new, t_list *head, unsigned int index);
 # define LIST_FOREACH(h, p) p=(t_list*)h;while((p=p->next)&&p!=h)
 
 # define LIST_FOREACH_PREV(head,pos) pos=head;while((pos=pos->prev)&&pos!=head)
-
-/*
-**# define LIST_FOREACH_SAFE(head, pos, save) save=head->next;\
-**		   while((pos=save)&&pos!=head&&(save=save->next))
-*/
-
-
-
-
-
-
-
-
-
 
 #endif
