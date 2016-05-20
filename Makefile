@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: anouvel <adrien.nouvel@outlook.com>        +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/04/30 19:03:39 by anouvel           #+#    #+#              #
-#    Updated: 2016/05/01 16:26:00 by anouvel          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 # ---------------------------------------------------------------------------- #
 # PROJECT DATA
 # ---------------------------------------------------------------------------- #
@@ -20,12 +8,6 @@ NAME		=	libft.a
 
 SRCS		=	ft_get_/get_next_line.c	\
 				ft_ito_/ft_itoa.c		\
-				ft_lst_/ft_lstnew.c		\
-				ft_lst_/ft_lstdelone.c	\
-				ft_lst_/ft_lstdel.c		\
-				ft_lst_/ft_lstadd.c		\
-				ft_lst_/ft_lstiter.c	\
-				ft_lst_/ft_lstmap.c		\
 				ft_mem_/ft_memalloc.c	\
 				ft_mem_/ft_memdel.c		\
 				ft_put_/ft_putchar.c	\
@@ -78,6 +60,18 @@ SRCS		=	ft_get_/get_next_line.c	\
 				recodes/ft_isprint.c	\
 				recodes/ft_toupper.c	\
 				recodes/ft_tolower.c	\
+				ft_lst_/t_list/t_list_add.c	\
+				ft_lst_/t_list/t_list_del.c	\
+				ft_lst_/list_push_front.c	\
+				ft_lst_/list_push_back.c	\
+				ft_lst_/list_del.c			\
+				ft_lst_/list_is_empty.c		\
+				ft_lst_/list_insert.c		\
+				ft_lst_/list_size.c			\
+				ft_lst_/list_move.c			\
+				ft_lst_/list_nth.c			\
+				ft_lst_/list_slice.c		\
+				ft_lst_/list_splice.c		\
 
 # ---------------------------------------------------------------------------- #
 # PROJECT CONFIGURATION
@@ -206,36 +200,6 @@ $(DIROBJ)ft_itoa.o: srcs/ft_ito_/ft_itoa.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_ito_/ft_itoa.c\n"
 		@$(CC) -c ./srcs/ft_ito_/ft_itoa.c -o ./.objs/ft_itoa.o $(CPPFLAGS) $(CFLAGS) 
-
-$(DIROBJ)ft_lstnew.o: srcs/ft_lst_/ft_lstnew.c incs/libft.h
-		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/ft_lstnew.c\n"
-		@$(CC) -c ./srcs/ft_lst_/ft_lstnew.c -o ./.objs/ft_lstnew.o $(CPPFLAGS) $(CFLAGS) 
-
-$(DIROBJ)ft_lstdelone.o: srcs/ft_lst_/ft_lstdelone.c incs/libft.h
-		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/ft_lstdelone.c\n"
-		@$(CC) -c ./srcs/ft_lst_/ft_lstdelone.c -o ./.objs/ft_lstdelone.o $(CPPFLAGS) $(CFLAGS) 
-
-$(DIROBJ)ft_lstdel.o: srcs/ft_lst_/ft_lstdel.c incs/libft.h
-		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/ft_lstdel.c\n"
-		@$(CC) -c ./srcs/ft_lst_/ft_lstdel.c -o ./.objs/ft_lstdel.o $(CPPFLAGS) $(CFLAGS) 
-
-$(DIROBJ)ft_lstadd.o: srcs/ft_lst_/ft_lstadd.c incs/libft.h
-		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/ft_lstadd.c\n"
-		@$(CC) -c ./srcs/ft_lst_/ft_lstadd.c -o ./.objs/ft_lstadd.o $(CPPFLAGS) $(CFLAGS) 
-
-$(DIROBJ)ft_lstiter.o: srcs/ft_lst_/ft_lstiter.c incs/libft.h
-		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/ft_lstiter.c\n"
-		@$(CC) -c ./srcs/ft_lst_/ft_lstiter.c -o ./.objs/ft_lstiter.o $(CPPFLAGS) $(CFLAGS) 
-
-$(DIROBJ)ft_lstmap.o: srcs/ft_lst_/ft_lstmap.c incs/libft.h
-		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_lst_/ft_lstmap.c\n"
-		@$(CC) -c ./srcs/ft_lst_/ft_lstmap.c -o ./.objs/ft_lstmap.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_memalloc.o: srcs/ft_mem_/ft_memalloc.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
@@ -496,6 +460,66 @@ $(DIROBJ)ft_tolower.o: srcs/recodes/ft_tolower.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/recodes/ft_tolower.c\n"
 		@$(CC) -c ./srcs/recodes/ft_tolower.c -o ./.objs/ft_tolower.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)t_list_add.o: srcs/ft_lst_/t_list/t_list_add.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/t_list/t_list_add.c\n"
+		@$(CC) -c ./srcs/ft_lst_/t_list/t_list_add.c -o ./.objs/t_list_add.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)t_list_del.o: srcs/ft_lst_/t_list/t_list_del.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/t_list/t_list_del.c\n"
+		@$(CC) -c ./srcs/ft_lst_/t_list/t_list_del.c -o ./.objs/t_list_del.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_push_front.o: srcs/ft_lst_/list_push_front.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list_push_front.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list_push_front.c -o ./.objs/list_push_front.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_push_back.o: srcs/ft_lst_/list_push_back.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list_push_back.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list_push_back.c -o ./.objs/list_push_back.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_del.o: srcs/ft_lst_/list_del.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list_del.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list_del.c -o ./.objs/list_del.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_is_empty.o: srcs/ft_lst_/list_is_empty.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list_is_empty.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list_is_empty.c -o ./.objs/list_is_empty.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_insert.o: srcs/ft_lst_/list_insert.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list_insert.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list_insert.c -o ./.objs/list_insert.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_size.o: srcs/ft_lst_/list_size.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list_size.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list_size.c -o ./.objs/list_size.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_move.o: srcs/ft_lst_/list_move.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list_move.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list_move.c -o ./.objs/list_move.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_nth.o: srcs/ft_lst_/list_nth.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list_nth.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list_nth.c -o ./.objs/list_nth.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_slice.o: srcs/ft_lst_/list_slice.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list_slice.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list_slice.c -o ./.objs/list_slice.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_splice.o: srcs/ft_lst_/list_splice.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list_splice.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list_splice.c -o ./.objs/list_splice.o $(CPPFLAGS) $(CFLAGS) 
 
 
 #end
