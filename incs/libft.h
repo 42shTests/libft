@@ -6,7 +6,7 @@
 /*   By: anouvel <anouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 16:20:37 by anouvel           #+#    #+#             */
-/*   Updated: 2016/05/10 12:51:01 by anouvel          ###   ########.fr       */
+/*   Updated: 2016/05/20 15:43:51 by anouvel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
-typedef enum		e_bool
-{
-	false,
-	true
-}					t_bool;
 
 /*
 ** Integer conversion.
