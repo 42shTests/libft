@@ -58,6 +58,7 @@ SRCS		=	ft_get_/get_next_line.c	\
 				recodes/ft_isalnum.c	\
 				recodes/ft_isascii.c	\
 				recodes/ft_isprint.c	\
+				recodes/ft_isspace.c	\
 				recodes/ft_toupper.c	\
 				recodes/ft_tolower.c	\
 				ft_lst_/t_list/t_list_add.c	\
@@ -450,6 +451,11 @@ $(DIROBJ)ft_isprint.o: srcs/recodes/ft_isprint.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/recodes/ft_isprint.c\n"
 		@$(CC) -c ./srcs/recodes/ft_isprint.c -o ./.objs/ft_isprint.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_isspace.o: srcs/recodes/ft_isspace.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/recodes/ft_isspace.c\n"
+		@$(CC) -c ./srcs/recodes/ft_isspace.c -o ./.objs/ft_isspace.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_toupper.o: srcs/recodes/ft_toupper.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
