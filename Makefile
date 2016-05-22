@@ -63,6 +63,7 @@ SRCS		=	ft_get_/get_next_line.c	\
 				recodes/ft_tolower.c	\
 				ft_lst_/t_list/t_list_add.c	\
 				ft_lst_/t_list/t_list_del.c	\
+				ft_lst_/t_list/t_list_splice.c	\
 				ft_lst_/list_push_front.c	\
 				ft_lst_/list_push_back.c	\
 				ft_lst_/list_del.c			\
@@ -476,6 +477,11 @@ $(DIROBJ)t_list_del.o: srcs/ft_lst_/t_list/t_list_del.c incs/list.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_lst_/t_list/t_list_del.c\n"
 		@$(CC) -c ./srcs/ft_lst_/t_list/t_list_del.c -o ./.objs/t_list_del.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)t_list_splice.o: srcs/ft_lst_/t_list/t_list_splice.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/t_list/t_list_splice.c\n"
+		@$(CC) -c ./srcs/ft_lst_/t_list/t_list_splice.c -o ./.objs/t_list_splice.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)list_push_front.o: srcs/ft_lst_/list_push_front.c incs/list.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
