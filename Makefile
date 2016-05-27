@@ -10,6 +10,7 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_ito_/ft_itoa.c		\
 				ft_mem_/ft_memalloc.c	\
 				ft_mem_/ft_memdel.c		\
+				ft_mem_/ft_memdel_tab.c		\
 				ft_put_/ft_putchar.c	\
 				ft_put_/ft_putchar_fd.c	\
 				ft_put_/ft_putstr.c		\
@@ -212,6 +213,11 @@ $(DIROBJ)ft_memdel.o: srcs/ft_mem_/ft_memdel.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_mem_/ft_memdel.c\n"
 		@$(CC) -c ./srcs/ft_mem_/ft_memdel.c -o ./.objs/ft_memdel.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_memdel_tab.o: srcs/ft_mem_/ft_memdel_tab.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_mem_/ft_memdel_tab.c\n"
+		@$(CC) -c ./srcs/ft_mem_/ft_memdel_tab.c -o ./.objs/ft_memdel_tab.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_putchar.o: srcs/ft_put_/ft_putchar.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
