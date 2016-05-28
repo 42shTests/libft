@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <wchar.h>
 
 /*
 ** Array manipulation
@@ -35,6 +36,8 @@ char				*ft_itoa(int n);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 void				ft_memdel_tab(void ***ap);
+void				*ft_memdup(void const *src, size_t size);
+void				*ft_realloc(void *src, size_t size);
 
 /*
 ** Put functions.
@@ -46,6 +49,7 @@ void				ft_putstr(const char *s);
 void				ft_putstr_fd(const char *s, int fd);
 void				ft_putendl(const char *s);
 void				ft_putendl_fd(const char *s, int fd);
+void				ft_putmem_fd(void *content, size_t size, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int nb, int fd);
 
@@ -69,6 +73,9 @@ char				**ft_strsplit(const char *s, char c);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
 char				*ft_strtrim(const char *s);
 char				*ft_strser(const char *s);
+char				*ft_wcstombs(const wchar_t *src, size_t n);
+short				ft_wctomb(char *dest, wchar_t c);
+size_t				ft_wstrlen(const wchar_t *str);
 
 /*
 ** Standard libc recoding.

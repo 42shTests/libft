@@ -13,6 +13,8 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_mem_/ft_memalloc.c	\
 				ft_mem_/ft_memdel.c		\
 				ft_mem_/ft_memdel_tab.c	\
+				ft_mem_/ft_memdup.c		\
+				ft_mem_/ft_realloc.c	\
 				ft_pri_/ft_printf.c		\
 				ft_pri_/ft_printf_display.c\
 				ft_pri_/ft_printf_fill.c\
@@ -63,6 +65,7 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_put_/ft_putchar_fd.c	\
 				ft_put_/ft_putstr.c		\
 				ft_put_/ft_putstr_fd.c	\
+				ft_put_/ft_putmem_fd.c	\
 				ft_put_/ft_putnbr.c		\
 				ft_put_/ft_putnbr_fd.c	\
 				ft_put_/ft_putendl.c	\
@@ -83,6 +86,8 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_str_/ft_strser.c		\
 				ft_str_/ft_strtrim.c	\
 				ft_str_/ft_strsplit.c	\
+				ft_str_/ft_wcstombs.c	\
+				ft_str_/ft_wctomb.c		\
 				recodes/ft_memset.c		\
 				recodes/ft_bzero.c		\
 				recodes/ft_memcpy.c		\
@@ -278,6 +283,16 @@ $(DIROBJ)ft_memdel_tab.o: srcs/ft_mem_/ft_memdel_tab.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_mem_/ft_memdel_tab.c\n"
 		@$(CC) -c ./srcs/ft_mem_/ft_memdel_tab.c -o ./.objs/ft_memdel_tab.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_memdup.o: srcs/ft_mem_/ft_memdup.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_mem_/ft_memdup.c\n"
+		@$(CC) -c ./srcs/ft_mem_/ft_memdup.c -o ./.objs/ft_memdup.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_realloc.o: srcs/ft_mem_/ft_realloc.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_mem_/ft_realloc.c\n"
+		@$(CC) -c ./srcs/ft_mem_/ft_realloc.c -o ./.objs/ft_realloc.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_printf.o: srcs/ft_pri_/ft_printf.c incs/libftprintf.h incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
@@ -574,6 +589,11 @@ $(DIROBJ)ft_putstr_fd.o: srcs/ft_put_/ft_putstr_fd.c incs/libft.h
 		@printf "compiling ./srcs/ft_put_/ft_putstr_fd.c\n"
 		@$(CC) -c ./srcs/ft_put_/ft_putstr_fd.c -o ./.objs/ft_putstr_fd.o $(CPPFLAGS) $(CFLAGS) 
 
+$(DIROBJ)ft_putmem_fd.o: srcs/ft_put_/ft_putmem_fd.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_put_/ft_putmem_fd.c\n"
+		@$(CC) -c ./srcs/ft_put_/ft_putmem_fd.c -o ./.objs/ft_putmem_fd.o $(CPPFLAGS) $(CFLAGS) 
+
 $(DIROBJ)ft_putnbr.o: srcs/ft_put_/ft_putnbr.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_put_/ft_putnbr.c\n"
@@ -673,6 +693,16 @@ $(DIROBJ)ft_strsplit.o: srcs/ft_str_/ft_strsplit.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_str_/ft_strsplit.c\n"
 		@$(CC) -c ./srcs/ft_str_/ft_strsplit.c -o ./.objs/ft_strsplit.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_wcstombs.o: srcs/ft_str_/ft_wcstombs.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_str_/ft_wcstombs.c\n"
+		@$(CC) -c ./srcs/ft_str_/ft_wcstombs.c -o ./.objs/ft_wcstombs.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_wctomb.o: srcs/ft_str_/ft_wctomb.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_str_/ft_wctomb.c\n"
+		@$(CC) -c ./srcs/ft_str_/ft_wctomb.c -o ./.objs/ft_wctomb.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_memset.o: srcs/recodes/ft_memset.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"

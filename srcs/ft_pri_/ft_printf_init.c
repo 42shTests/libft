@@ -5,7 +5,7 @@ int						ft_printf_params(t_printf_params **params)
 	*params = (t_printf_params *)ft_memalloc(sizeof(t_printf_params));
 	if (*params == NULL)
 		return (-1);
-	(*params)->fd = STDOUT;
+	(*params)->fd = STDOUT_FILENO;
 	(*params)->fd_dynamic = 0;
 	(*params)->export_dynamic = 0;
 	return (0);
