@@ -6,7 +6,6 @@
 ** It returns `1` on success and `0` on missing element.
 */
 
-
 int	ft_array_indexof(char const **array, char const *str)
 {
 	int	i;
