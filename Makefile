@@ -10,7 +10,53 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_ito_/ft_itoa.c		\
 				ft_mem_/ft_memalloc.c	\
 				ft_mem_/ft_memdel.c		\
-				ft_mem_/ft_memdel_tab.c		\
+				ft_mem_/ft_memdel_tab.c	\
+				ft_pri_/ft_printf.c		\
+				ft_pri_/ft_printf_display.c\
+				ft_pri_/ft_printf_fill.c\
+				ft_pri_/ft_printf_fill_default.c\
+				ft_pri_/ft_printf_fill_empty.c\
+				ft_pri_/ft_printf_fill_d.c\
+				ft_pri_/ft_printf_fill_d_short.c\
+				ft_pri_/ft_printf_fill_d_int.c\
+				ft_pri_/ft_printf_fill_d_long.c\
+				ft_pri_/ft_printf_fill_d_llong.c\
+				ft_pri_/ft_printf_fill_d_intmax.c\
+				ft_pri_/ft_printf_fill_b.c\
+				ft_pri_/ft_printf_fill_b_char.c\
+				ft_pri_/ft_printf_fill_b_short.c\
+				ft_pri_/ft_printf_fill_b_int.c\
+				ft_pri_/ft_printf_fill_b_long.c\
+				ft_pri_/ft_printf_fill_b_llong.c\
+				ft_pri_/ft_printf_fill_b_intmax.c\
+				ft_pri_/ft_printf_fill_u.c\
+				ft_pri_/ft_printf_fill_u_short.c\
+				ft_pri_/ft_printf_fill_u_int.c\
+				ft_pri_/ft_printf_fill_u_long.c\
+				ft_pri_/ft_printf_fill_u_llong.c\
+				ft_pri_/ft_printf_fill_u_intmax.c\
+				ft_pri_/ft_printf_fill_p.c\
+				ft_pri_/ft_printf_fill_s.c\
+				ft_pri_/ft_printf_fill_s_long.c\
+				ft_pri_/ft_printf_fill_c.c\
+				ft_pri_/ft_printf_fill_x.c\
+				ft_pri_/ft_printf_fill_x_short.c\
+				ft_pri_/ft_printf_fill_x_int.c\
+				ft_pri_/ft_printf_fill_x_long.c\
+				ft_pri_/ft_printf_fill_x_llong.c\
+				ft_pri_/ft_printf_fill_x_intmax.c\
+				ft_pri_/ft_printf_fill_o.c\
+				ft_pri_/ft_printf_fill_o_short.c\
+				ft_pri_/ft_printf_fill_o_int.c\
+				ft_pri_/ft_printf_fill_o_long.c\
+				ft_pri_/ft_printf_fill_o_llong.c\
+				ft_pri_/ft_printf_fill_o_intmax.c\
+				ft_pri_/ft_printf_init.c\
+				ft_pri_/ft_printf_init_conv.c\
+				ft_pri_/ft_printf_init_conv_digit.c\
+				ft_pri_/ft_printf_init_utils.c\
+				ft_pri_/ft_printf_utils.c\
+				ft_pri_/ft_printf_utils2.c\
 				ft_put_/ft_putchar.c	\
 				ft_put_/ft_putchar_fd.c	\
 				ft_put_/ft_putstr.c		\
@@ -218,6 +264,281 @@ $(DIROBJ)ft_memdel_tab.o: srcs/ft_mem_/ft_memdel_tab.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_mem_/ft_memdel_tab.c\n"
 		@$(CC) -c ./srcs/ft_mem_/ft_memdel_tab.c -o ./.objs/ft_memdel_tab.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf.o: srcs/ft_pri_/ft_printf.c incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf.c -o ./.objs/ft_printf.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_display.o: srcs/ft_pri_/ft_printf_display.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_display.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_display.c -o ./.objs/ft_printf_display.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill.o: srcs/ft_pri_/ft_printf_fill.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill.c -o ./.objs/ft_printf_fill.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_default.o: srcs/ft_pri_/ft_printf_fill_default.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_default.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_default.c -o ./.objs/ft_printf_fill_default.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_empty.o: srcs/ft_pri_/ft_printf_fill_empty.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_empty.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_empty.c -o ./.objs/ft_printf_fill_empty.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_d.o: srcs/ft_pri_/ft_printf_fill_d.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_d.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_d.c -o ./.objs/ft_printf_fill_d.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_d_short.o: srcs/ft_pri_/ft_printf_fill_d_short.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_d_short.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_d_short.c -o ./.objs/ft_printf_fill_d_short.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_d_int.o: srcs/ft_pri_/ft_printf_fill_d_int.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_d_int.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_d_int.c -o ./.objs/ft_printf_fill_d_int.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_d_long.o: srcs/ft_pri_/ft_printf_fill_d_long.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_d_long.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_d_long.c -o ./.objs/ft_printf_fill_d_long.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_d_llong.o: srcs/ft_pri_/ft_printf_fill_d_llong.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_d_llong.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_d_llong.c -o ./.objs/ft_printf_fill_d_llong.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_d_intmax.o: srcs/ft_pri_/ft_printf_fill_d_intmax.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_d_intmax.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_d_intmax.c -o ./.objs/ft_printf_fill_d_intmax.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_b.o: srcs/ft_pri_/ft_printf_fill_b.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_b.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_b.c -o ./.objs/ft_printf_fill_b.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_b_char.o: srcs/ft_pri_/ft_printf_fill_b_char.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_b_char.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_b_char.c -o ./.objs/ft_printf_fill_b_char.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_b_short.o: srcs/ft_pri_/ft_printf_fill_b_short.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_b_short.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_b_short.c -o ./.objs/ft_printf_fill_b_short.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_b_int.o: srcs/ft_pri_/ft_printf_fill_b_int.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_b_int.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_b_int.c -o ./.objs/ft_printf_fill_b_int.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_b_long.o: srcs/ft_pri_/ft_printf_fill_b_long.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_b_long.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_b_long.c -o ./.objs/ft_printf_fill_b_long.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_b_llong.o: srcs/ft_pri_/ft_printf_fill_b_llong.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_b_llong.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_b_llong.c -o ./.objs/ft_printf_fill_b_llong.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_b_intmax.o: srcs/ft_pri_/ft_printf_fill_b_intmax.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_b_intmax.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_b_intmax.c -o ./.objs/ft_printf_fill_b_intmax.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_u.o: srcs/ft_pri_/ft_printf_fill_u.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_u.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_u.c -o ./.objs/ft_printf_fill_u.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_u_short.o: srcs/ft_pri_/ft_printf_fill_u_short.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_u_short.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_u_short.c -o ./.objs/ft_printf_fill_u_short.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_u_int.o: srcs/ft_pri_/ft_printf_fill_u_int.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_u_int.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_u_int.c -o ./.objs/ft_printf_fill_u_int.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_u_long.o: srcs/ft_pri_/ft_printf_fill_u_long.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_u_long.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_u_long.c -o ./.objs/ft_printf_fill_u_long.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_u_llong.o: srcs/ft_pri_/ft_printf_fill_u_llong.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_u_llong.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_u_llong.c -o ./.objs/ft_printf_fill_u_llong.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_u_intmax.o: srcs/ft_pri_/ft_printf_fill_u_intmax.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_u_intmax.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_u_intmax.c -o ./.objs/ft_printf_fill_u_intmax.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_p.o: srcs/ft_pri_/ft_printf_fill_p.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_p.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_p.c -o ./.objs/ft_printf_fill_p.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_s.o: srcs/ft_pri_/ft_printf_fill_s.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_s.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_s.c -o ./.objs/ft_printf_fill_s.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_s_long.o: srcs/ft_pri_/ft_printf_fill_s_long.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_s_long.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_s_long.c -o ./.objs/ft_printf_fill_s_long.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_c.o: srcs/ft_pri_/ft_printf_fill_c.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_c.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_c.c -o ./.objs/ft_printf_fill_c.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_x.o: srcs/ft_pri_/ft_printf_fill_x.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_x.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_x.c -o ./.objs/ft_printf_fill_x.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_x_short.o: srcs/ft_pri_/ft_printf_fill_x_short.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_x_short.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_x_short.c -o ./.objs/ft_printf_fill_x_short.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_x_int.o: srcs/ft_pri_/ft_printf_fill_x_int.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_x_int.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_x_int.c -o ./.objs/ft_printf_fill_x_int.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_x_long.o: srcs/ft_pri_/ft_printf_fill_x_long.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_x_long.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_x_long.c -o ./.objs/ft_printf_fill_x_long.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_x_llong.o: srcs/ft_pri_/ft_printf_fill_x_llong.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_x_llong.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_x_llong.c -o ./.objs/ft_printf_fill_x_llong.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_x_intmax.o: srcs/ft_pri_/ft_printf_fill_x_intmax.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_x_intmax.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_x_intmax.c -o ./.objs/ft_printf_fill_x_intmax.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_o.o: srcs/ft_pri_/ft_printf_fill_o.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_o.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_o.c -o ./.objs/ft_printf_fill_o.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_o_short.o: srcs/ft_pri_/ft_printf_fill_o_short.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_o_short.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_o_short.c -o ./.objs/ft_printf_fill_o_short.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_o_int.o: srcs/ft_pri_/ft_printf_fill_o_int.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_o_int.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_o_int.c -o ./.objs/ft_printf_fill_o_int.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_o_long.o: srcs/ft_pri_/ft_printf_fill_o_long.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_o_long.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_o_long.c -o ./.objs/ft_printf_fill_o_long.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_o_llong.o: srcs/ft_pri_/ft_printf_fill_o_llong.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_o_llong.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_o_llong.c -o ./.objs/ft_printf_fill_o_llong.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_fill_o_intmax.o: srcs/ft_pri_/ft_printf_fill_o_intmax.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_fill_o_intmax.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill_o_intmax.c -o ./.objs/ft_printf_fill_o_intmax.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_init.o: srcs/ft_pri_/ft_printf_init.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_init.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_init.c -o ./.objs/ft_printf_init.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_init_conv.o: srcs/ft_pri_/ft_printf_init_conv.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_init_conv.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_init_conv.c -o ./.objs/ft_printf_init_conv.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_init_conv_digit.o: srcs/ft_pri_/ft_printf_init_conv_digit.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_init_conv_digit.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_init_conv_digit.c -o ./.objs/ft_printf_init_conv_digit.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_init_utils.o: srcs/ft_pri_/ft_printf_init_utils.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_init_utils.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_init_utils.c -o ./.objs/ft_printf_init_utils.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_utils.o: srcs/ft_pri_/ft_printf_utils.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_utils.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_utils.c -o ./.objs/ft_printf_utils.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_utils2.o: srcs/ft_pri_/ft_printf_utils2.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_utils2.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_utils2.c -o ./.objs/ft_printf_utils2.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_putchar.o: srcs/ft_put_/ft_putchar.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"

@@ -9,3 +9,4 @@
 # editors
 .*.swp
 .idea/
+.DS_Store
