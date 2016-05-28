@@ -19,6 +19,7 @@
 /*
 ** Array manipulation
 */
+int					ft_array_indexof(char const **array, char const *str);
 size_t				ft_array_pop(char ***argv, size_t start, size_t len);
 
 /*
