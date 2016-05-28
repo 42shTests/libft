@@ -7,6 +7,7 @@ NAME		=	libft.a
 # ---------------------------------------------------------------------------- #
 
 SRCS		=	ft_get_/get_next_line.c	\
+				ft_arr_/ft_array_indexof.c\
 				ft_arr_/ft_array_pop.c	\
 				ft_ito_/ft_itoa.c		\
 				ft_mem_/ft_memalloc.c	\
