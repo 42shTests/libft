@@ -945,4 +945,5 @@ $(DIROBJ)list_splice.o: srcs/ft_lst_/list_splice.c incs/list.h
 		@$(CC) -c ./srcs/ft_lst_/list_splice.c -o ./.objs/list_splice.o $(CPPFLAGS) $(CFLAGS) 
 
 
+
 #end
