@@ -1,5 +1,6 @@
 #include "libft.h"
 
+
 int	ft_strisalnum(char const *str)
 {
 	while (*str)
