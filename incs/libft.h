@@ -17,6 +17,11 @@
 # include <unistd.h>
 
 /*
+** Array manipulation
+*/
+size_t				ft_array_pop(char ***argv, size_t start, size_t len);
+
+/*
 ** Integer conversion.
 */
 
