@@ -60,6 +60,8 @@ void				ft_putnbr_fd(int nb, int fd);
 void				ft_strclr(char *s);
 void				ft_strdel(char **as);
 int					ft_strequ(const char *s1, const char *s2);
+int					ft_strisalnum(char const *str);
+int					ft_strisnumeric(char const *str);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(const char *s1, const char *s2);

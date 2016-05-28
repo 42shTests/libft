@@ -73,6 +73,8 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_str_/ft_strnew.c		\
 				ft_str_/ft_strdel.c		\
 				ft_str_/ft_strclr.c		\
+				ft_str_/ft_strisnumeric.c\
+				ft_str_/ft_strisalnum.c	\
 				ft_str_/ft_striter.c	\
 				ft_str_/ft_striteri.c	\
 				ft_str_/ft_strmap.c		\
