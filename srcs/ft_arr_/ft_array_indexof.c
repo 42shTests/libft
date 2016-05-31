@@ -8,11 +8,14 @@
 
 int	ft_array_indexof(char const **array, char const *str)
 {
-	while(*array)
+	int	i;
+
+	i = 0;
+	while(array[i])
 	{
-		if (ft_strcmp(*array, str) == 0)
-			return (1);
-		array++;
+		if (ft_strcmp(array[i], str) == 0)
+			return (i);
+		i++;
 	}
-	return (0);
+	return (-1);
 }
