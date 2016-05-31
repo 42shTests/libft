@@ -7,6 +7,8 @@ NAME		=	libft.a
 # ---------------------------------------------------------------------------- #
 
 SRCS		=	ft_get_/get_next_line.c	\
+				ft_arr_/ft_array_indexof.c\
+				ft_arr_/ft_array_pop.c	\
 				ft_ito_/ft_itoa.c		\
 				ft_mem_/ft_memalloc.c	\
 				ft_mem_/ft_memdel.c		\
@@ -22,6 +24,8 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_str_/ft_strnew.c		\
 				ft_str_/ft_strdel.c		\
 				ft_str_/ft_strclr.c		\
+				ft_str_/ft_strisnumeric.c\
+				ft_str_/ft_strisalnum.c	\
 				ft_str_/ft_striter.c	\
 				ft_str_/ft_striteri.c	\
 				ft_str_/ft_strmap.c		\
@@ -199,6 +203,16 @@ $(DIROBJ)get_next_line.o: srcs/ft_get_/get_next_line.c incs/get_next_line.h \
 		@printf "compiling ./srcs/ft_get_/get_next_line.c\n"
 		@$(CC) -c ./srcs/ft_get_/get_next_line.c -o ./.objs/get_next_line.o $(CPPFLAGS) $(CFLAGS) 
 
+$(DIROBJ)ft_array_indexof.o: srcs/ft_arr_/ft_array_indexof.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_arr_/ft_array_indexof.c\n"
+		@$(CC) -c ./srcs/ft_arr_/ft_array_indexof.c -o ./.objs/ft_array_indexof.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_array_pop.o: srcs/ft_arr_/ft_array_pop.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_arr_/ft_array_pop.c\n"
+		@$(CC) -c ./srcs/ft_arr_/ft_array_pop.c -o ./.objs/ft_array_pop.o $(CPPFLAGS) $(CFLAGS) 
+
 $(DIROBJ)ft_itoa.o: srcs/ft_ito_/ft_itoa.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_ito_/ft_itoa.c\n"
@@ -273,6 +287,16 @@ $(DIROBJ)ft_strclr.o: srcs/ft_str_/ft_strclr.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_str_/ft_strclr.c\n"
 		@$(CC) -c ./srcs/ft_str_/ft_strclr.c -o ./.objs/ft_strclr.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_strisnumeric.o: srcs/ft_str_/ft_strisnumeric.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_str_/ft_strisnumeric.c\n"
+		@$(CC) -c ./srcs/ft_str_/ft_strisnumeric.c -o ./.objs/ft_strisnumeric.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_strisalnum.o: srcs/ft_str_/ft_strisalnum.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_str_/ft_strisalnum.c\n"
+		@$(CC) -c ./srcs/ft_str_/ft_strisalnum.c -o ./.objs/ft_strisalnum.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_striter.o: srcs/ft_str_/ft_striter.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
