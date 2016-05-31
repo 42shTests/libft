@@ -1,27 +1,27 @@
 #include "libft.h"
 
 /*
-** This functions may pop `len` arguments from `argv` starting
-** at element number `start`. It returns the number of argument
+** This function may pop `total` arguments from `**array` starting
+** at element number `start`. It returns the number of arguments
 ** it has succeeded to pop.
 */
 
-size_t	ft_array_pop(char ***argv, size_t start, size_t len)
+size_t	ft_array_pop(char ***array, size_t start, size_t total)
 {
 	size_t	i;
 	size_t	k;
 
 	i = 0;
-	while (i < len && (*argv)[start])
+	while (i < total && (*array)[start])
 	{
-		ft_memdel((void **)&(*argv)[start]);
+		ft_memdel((void **)&(*array)[start]);
 		k = 0;
-		while ((*argv)[start + k + 1])
+		while ((*array)[start + k + 1])
 		{
-			(*argv)[start + k] = (*argv)[start + k + 1];
+			(*array)[start + k] = (*array)[start + k + 1];
 			k++;
 		}
-		(*argv)[start + k] = NULL;
+		(*array)[start + k] = NULL;
 		i++;
 	}
 	return (i);
