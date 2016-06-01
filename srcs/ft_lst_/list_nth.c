@@ -7,9 +7,9 @@ t_list	*list_nth(const t_list *head, const int index)
 
 	tmp = (t_list *)head;
 	i = 0;
-	if (index >= 0)
+	if (index > 0)
 	{
-		while (i <= index)
+		while (i < index)
 		{
 			tmp = tmp->next;
 			i++;
