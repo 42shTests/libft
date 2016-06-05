@@ -130,6 +130,7 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_lst_/list_size.c			\
 				ft_lst_/list_move.c			\
 				ft_lst_/list_nth.c			\
+				ft_lst_/list_nth_safe.c		\
 				ft_lst_/list_slice.c		\
 				ft_lst_/list_splice.c		\
 
@@ -915,6 +916,11 @@ $(DIROBJ)list_nth.o: srcs/ft_lst_/list_nth.c incs/list.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_lst_/list_nth.c\n"
 		@$(CC) -c ./srcs/ft_lst_/list_nth.c -o ./.objs/list_nth.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)list_nth_safe.o: srcs/ft_lst_/list_nth_safe.c incs/list.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_lst_/list_nth_safe.c\n"
+		@$(CC) -c ./srcs/ft_lst_/list_nth_safe.c -o ./.objs/list_nth_safe.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)list_slice.o: srcs/ft_lst_/list_slice.c incs/list.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
