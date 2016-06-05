@@ -10,8 +10,8 @@ t_list	*list_slice(t_list *new, t_list *head, const int index, int len)
 	if (!new || !head || !len)
 		return ((t_list *)0);
 	INIT_LIST_HEAD(new);
-	start = list_nth(head, index);
-	end = list_nth(head, index + len - 1);
+	start = list_nth(head, index + 1);
+	end = list_nth(head, index + len);
 	prev = start->prev;
 	next = end->next;
 	prev->next = next;
