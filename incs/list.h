@@ -97,6 +97,7 @@ void		list_splice(t_list *list, t_list *head);
 ** Get the nth node of the list pointed by head.
 */
 t_list		*list_nth(const t_list *head, const int index);
+t_list		*list_nth_safe(const t_list *head, const int index);
 
 /*
 ** list slice: get a part of a list
