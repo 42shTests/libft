@@ -88,6 +88,7 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_str_/ft_strjoin3_safe.c\
 				ft_str_/ft_strser.c		\
 				ft_str_/ft_strtrim.c	\
+				ft_str_/ft_strsplit.c	\
 				ft_str_/strsplit_ifs.c	\
 				ft_str_/ft_wcstombs.c	\
 				ft_str_/ft_wstrlen.c	\
