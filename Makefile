@@ -711,6 +711,11 @@ $(DIROBJ)ft_strtrim.o: srcs/ft_str_/ft_strtrim.c incs/libft.h
 		@printf "compiling ./srcs/ft_str_/ft_strtrim.c\n"
 		@$(CC) -c ./srcs/ft_str_/ft_strtrim.c -o ./.objs/ft_strtrim.o $(CPPFLAGS) $(CFLAGS) 
 
+$(DIROBJ)ft_strsplit.o: srcs/ft_str_/ft_strsplit.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_str_/ft_strsplit.c\n"
+		@$(CC) -c ./srcs/ft_str_/ft_strsplit.c -o ./.objs/ft_strsplit.o $(CPPFLAGS) $(CFLAGS) 
+
 $(DIROBJ)strsplit_ifs.o: srcs/ft_str_/strsplit_ifs.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_str_/strsplit_ifs.c\n"
