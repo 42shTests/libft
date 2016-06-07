@@ -6,7 +6,7 @@
 /*   By: anouvel <anouvel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 16:20:37 by anouvel           #+#    #+#             */
-/*   Updated: 2016/05/20 15:43:51 by anouvel          ###   ########.fr       */
+/*   Updated: 2016/06/07 14:59:48 by abombard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 int					ft_strnequ(const char *s1, const char *s2, size_t n);
 char				*ft_strnew(size_t size);
 char				**ft_strsplit(const char *s, char c);
+char				**strsplit_ifs(const char *s, const char *ifs);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
 char				*ft_strtrim(const char *s);
 char				*ft_strser(const char *s);
