@@ -5,7 +5,7 @@ int	ft_strisnumeric(char const *str)
 	char const	*ptr;
 
 	ptr = str;
-	while(*ptr)
+	while (*ptr)
 	{
 		if (str == ptr)
 		{

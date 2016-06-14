@@ -2,7 +2,7 @@
 
 int	ft_strisalnum(char const *str)
 {
-	while(*str)
+	while (*str)
 	{
 		if (ft_isalnum(*str) == 0)
 			return (0);
