@@ -11,7 +11,7 @@ int	ft_array_indexof(char const **array, char const *str)
 	int	i;
 
 	i = 0;
-	while(array[i])
+	while (array[i])
 	{
 		if (ft_strcmp(array[i], str) == 0)
 			return (i);
