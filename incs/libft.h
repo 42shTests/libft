@@ -81,7 +81,7 @@ char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 int					ft_strnequ(const char *s1, const char *s2, size_t n);
 char				*ft_strnew(size_t size);
 char				**ft_strsplit(const char *s, char c);
-char				**strsplit_ifs(const char *s, const char *ifs);
+char				**ft_strsplitstr(const char *s, const char *str);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
 char				*ft_strtrim(const char *s);
 char				*ft_strser(const char *s);

@@ -89,7 +89,7 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_str_/ft_strser.c		\
 				ft_str_/ft_strtrim.c	\
 				ft_str_/ft_strsplit.c	\
-				ft_str_/strsplit_ifs.c	\
+				ft_str_/ft_strsplitstr.c\
 				ft_str_/ft_wcstombs.c	\
 				ft_str_/ft_wstrlen.c	\
 				ft_str_/ft_wctomb.c		\
@@ -716,10 +716,10 @@ $(DIROBJ)ft_strsplit.o: srcs/ft_str_/ft_strsplit.c incs/libft.h
 		@printf "compiling ./srcs/ft_str_/ft_strsplit.c\n"
 		@$(CC) -c ./srcs/ft_str_/ft_strsplit.c -o ./.objs/ft_strsplit.o $(CPPFLAGS) $(CFLAGS) 
 
-$(DIROBJ)strsplit_ifs.o: srcs/ft_str_/strsplit_ifs.c incs/libft.h
+$(DIROBJ)ft_strsplitstr.o: srcs/ft_str_/ft_strsplitstr.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
-		@printf "compiling ./srcs/ft_str_/strsplit_ifs.c\n"
-		@$(CC) -c ./srcs/ft_str_/strsplit_ifs.c -o ./.objs/strsplit_ifs.o $(CPPFLAGS) $(CFLAGS) 
+		@printf "compiling ./srcs/ft_str_/ft_strsplitstr.c\n"
+		@$(CC) -c ./srcs/ft_str_/ft_strsplitstr.c -o ./.objs/ft_strsplitstr.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_wcstombs.o: srcs/ft_str_/ft_wcstombs.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
