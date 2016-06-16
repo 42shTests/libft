@@ -85,6 +85,7 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_str_/ft_strsub.c		\
 				ft_str_/ft_strjoin.c	\
 				ft_str_/ft_strjoin3.c	\
+				ft_str_/ft_strjoin3_safe.c\
 				ft_str_/ft_strser.c		\
 				ft_str_/ft_strtrim.c	\
 				ft_str_/ft_strsplit.c	\
@@ -692,6 +693,11 @@ $(DIROBJ)ft_strjoin3.o: srcs/ft_str_/ft_strjoin3.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_str_/ft_strjoin3.c\n"
 		@$(CC) -c ./srcs/ft_str_/ft_strjoin3.c -o ./.objs/ft_strjoin3.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_strjoin3_safe.o: srcs/ft_str_/ft_strjoin3_safe.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_str_/ft_strjoin3_safe.c\n"
+		@$(CC) -c ./srcs/ft_str_/ft_strjoin3_safe.c -o ./.objs/ft_strjoin3_safe.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_strser.o: srcs/ft_str_/ft_strser.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"

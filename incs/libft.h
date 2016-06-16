@@ -68,6 +68,8 @@ void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(const char *s1, const char *s2);
 char				*ft_strjoin3(char const *s1, char const *s2,
 						char const *s3);
+char				*ft_strjoin3_safe(char const *s1, char const *s2,
+						char const *s3);
 char				*ft_strmap(const char *s, char (*f)(char));
 char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 int					ft_strnequ(const char *s1, const char *s2, size_t n);
