@@ -1,7 +1,7 @@
 #include "libft.h"
 
 /*
-** This function duplicates the value `*value` and push it at the end
+** This function duplicates the value `*value` and push it at position `index`
 ** of the array pointed by `***array` through an allocation of a new one.
 ** If either parameter is NULL, it returns -1.
 ** If the array pointed by `***array` is NULL, a new one is created.
@@ -20,7 +20,29 @@ static int	s_return_and_free(char **new_array, size_t total)
 	return (-1);
 }
 
-int			ft_array_push_back(char ***array, char const *value)
+static int			s_iterate_on_array(char **array, char ***new_array,
+						size_t index, size_t *total)
+{
+	size_t	i;
+
+	i = 0;
+	while (array[i])
+	{
+		if (i == index)
+		{
+			(*new_array)[*total] = NULL;
+			(*total)++;
+		}
+		if (((*new_array)[*total] = ft_strdup(array[i])) == NULL)
+			return (-1);
+		(*total)++;
+		i++;
+	}
+	return (0);
+}
+
+int			ft_array_push_index(char ***array, char const *value,
+				size_t const index)
 {
 	char	**new_array;
 	size_t	total;
@@ -28,22 +50,22 @@ int			ft_array_push_back(char ***array, char const *value)
 	if (!value || !array)
 		return (-1);
 	total = 0;
-	if (*array)
-		while ((*array)[total])
-			total++;
+	while (*array && (*array)[total])
+		total++;
+	if (index > total)
+		return (-1);
 	if ((new_array = (char **)malloc(sizeof(char *) * (total + 2))) == NULL)
 		return (s_return_and_free(new_array, 0));
-	total = 0;
-	if (*array)
-		while ((*array)[total])
-		{
-			if ((new_array[total] = ft_strdup((*array)[total])) == NULL)
-				return (s_return_and_free(new_array, total));
-			total++;
-		}
-	if ((new_array[total] = ft_strdup(value)) == NULL)
+	if (*array && total > 0)
+	{
+		total = 0;
+		if (s_iterate_on_array(*array, &new_array, index, &total) == -1)
+			return (s_return_and_free(new_array, total));
+	}
+	total = total == 0 ? 1 : total;
+	if ((new_array[index] = ft_strdup(value)) == NULL)
 		return (s_return_and_free(new_array, total));
-	new_array[++total] = NULL;
+	new_array[total] = NULL;
 	ft_memdel_tab((void ***)&(*array));
 	*array = new_array;
 	return (total);
