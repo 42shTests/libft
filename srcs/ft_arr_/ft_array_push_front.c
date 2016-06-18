@@ -43,7 +43,7 @@ int			ft_array_push_front(char ***array, char const *value)
 				return (s_return_and_free(new_array, total));
 			total++;
 		}
-	new_array[++total] = NULL;
+	new_array[total + 1] = NULL;
 	ft_memdel_tab((void ***)&(*array));
 	*array = new_array;
 	return (total);
