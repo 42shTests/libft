@@ -11,6 +11,7 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_arr_/ft_array_indexof.c\
 				ft_arr_/ft_array_pop.c	\
 				ft_ito_/ft_itoa.c		\
+				ft_math_/ft_powi.c		\
 				ft_mem_/ft_memalloc.c	\
 				ft_mem_/ft_memdel.c		\
 				ft_mem_/ft_memdel_tab.c	\
@@ -278,6 +279,11 @@ $(DIROBJ)ft_itoa.o: srcs/ft_ito_/ft_itoa.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_ito_/ft_itoa.c\n"
 		@$(CC) -c ./srcs/ft_ito_/ft_itoa.c -o ./.objs/ft_itoa.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_powi.o: srcs/ft_math_/ft_powi.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_math_/ft_powi.c\n"
+		@$(CC) -c ./srcs/ft_math_/ft_powi.c -o ./.objs/ft_powi.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_memalloc.o: srcs/ft_mem_/ft_memalloc.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
