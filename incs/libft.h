@@ -31,6 +31,12 @@ size_t				ft_array_pop(char ***argv, size_t start, size_t len);
 char				*ft_itoa(int n);
 
 /*
+** Mathematics
+*/
+
+int					ft_powi(int n, int exp);
+
+/*
 ** Memory.
 */
 
