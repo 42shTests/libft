@@ -23,6 +23,10 @@
 char				**ft_array_dup(char **array);
 int					ft_array_indexof(char const **array, char const *str);
 size_t				ft_array_pop(char ***argv, size_t start, size_t len);
+int					ft_array_push_back(char ***array, char const *value);
+int					ft_array_push_front(char ***array, char const *value);
+int					ft_array_push_index(char ***array, char const *value,
+						size_t const index);
 
 /*
 ** Integer conversion.

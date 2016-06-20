@@ -10,6 +10,9 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_arr_/ft_array_dup.c	\
 				ft_arr_/ft_array_indexof.c\
 				ft_arr_/ft_array_pop.c	\
+				ft_arr_/ft_array_push_back.c\
+				ft_arr_/ft_array_push_front.c\
+				ft_arr_/ft_array_push_index.c\
 				ft_ito_/ft_itoa.c		\
 				ft_math_/ft_powi.c		\
 				ft_mem_/ft_memalloc.c	\
@@ -274,6 +277,21 @@ $(DIROBJ)ft_array_pop.o: srcs/ft_arr_/ft_array_pop.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_arr_/ft_array_pop.c\n"
 		@$(CC) -c ./srcs/ft_arr_/ft_array_pop.c -o ./.objs/ft_array_pop.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_array_push_back.o: srcs/ft_arr_/ft_array_push_back.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_arr_/ft_array_push_back.c\n"
+		@$(CC) -c ./srcs/ft_arr_/ft_array_push_back.c -o ./.objs/ft_array_push_back.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_array_push_front.o: srcs/ft_arr_/ft_array_push_front.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_arr_/ft_array_push_front.c\n"
+		@$(CC) -c ./srcs/ft_arr_/ft_array_push_front.c -o ./.objs/ft_array_push_front.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_array_push_index.o: srcs/ft_arr_/ft_array_push_index.c incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_arr_/ft_array_push_index.c\n"
+		@$(CC) -c ./srcs/ft_arr_/ft_array_push_index.c -o ./.objs/ft_array_push_index.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_itoa.o: srcs/ft_ito_/ft_itoa.c incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
