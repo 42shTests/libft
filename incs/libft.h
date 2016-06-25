@@ -87,6 +87,7 @@ char				*ft_strnew(size_t size);
 char				**ft_strsplit(const char *s, char c);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
 char				*ft_strtrim(const char *s);
+char				*ft_strtolower(char *s);
 char				*ft_strser(const char *s);
 char				*ft_wcstombs(const wchar_t *src, size_t n);
 short				ft_wctomb(char *dest, wchar_t c);
