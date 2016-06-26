@@ -1,10 +1,10 @@
 #include "libft.h"
 
-char			*ft_strjoin3_safe(char const *s1, char const *s2, char const *s3)
+char	*ft_strjoin3_safe(char const *s1, char const *s2, char const *s3)
 {
-	char		*new;
-	size_t		len;
-	size_t		i;
+	char	*new;
+	size_t	len;
+	size_t	i;
 
 	len = 0;
 	if (s1)
@@ -17,13 +17,13 @@ char			*ft_strjoin3_safe(char const *s1, char const *s2, char const *s3)
 		return (NULL);
 	len = -1;
 	if (s1 && (i = -1))
-		while(s1[++i])
+		while (s1[++i])
 			new[++len] = s1[i];
 	if (s2 && (i = -1))
-		while(s2[++i])
+		while (s2[++i])
 			new[++len] = s2[i];
 	if (s3 && (i = -1))
-		while(s3[++i])
+		while (s3[++i])
 			new[++len] = s3[i];
 	return (new);
 }
