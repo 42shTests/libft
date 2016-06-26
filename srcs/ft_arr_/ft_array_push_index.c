@@ -53,7 +53,7 @@ int			ft_array_push_index(char ***array, char const *value,
 	while (*array && (*array)[total])
 		total++;
 	if (index > total)
-		return (-1);
+		index = total;
 	if ((new_array = (char **)malloc(sizeof(char *) * (total + 2))) == NULL)
 		return (s_return_and_free(new_array, 0));
 	if (*array && total > 0)
