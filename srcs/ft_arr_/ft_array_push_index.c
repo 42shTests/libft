@@ -42,7 +42,7 @@ static int			s_iterate_on_array(char **array, char ***new_array,
 }
 
 int			ft_array_push_index(char ***array, char const *value,
-				size_t const index)
+				size_t index)
 {
 	char	**new_array;
 	size_t	total;
