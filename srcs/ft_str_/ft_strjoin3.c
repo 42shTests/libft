@@ -13,13 +13,13 @@ char			*ft_strjoin3(char const *s1, char const *s2, char const *s3)
 		{
 			len = -1;
 			i = -1;
-			while(s1[++i])
+			while (s1[++i])
 				new[++len] = s1[i];
 			i = -1;
-			while(s2[++i])
+			while (s2[++i])
 				new[++len] = s2[i];
 			i = -1;
-			while(s3[++i])
+			while (s3[++i])
 				new[++len] = s3[i];
 			return (new);
 		}

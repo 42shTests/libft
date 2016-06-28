@@ -20,7 +20,7 @@ static int	s_return_and_free(char **new_array, size_t total)
 	return (-1);
 }
 
-static int			s_iterate_on_array(char **array, char ***new_array,
+static int	s_iterate_on_array(char **array, char ***new_array,
 						size_t index, size_t *total)
 {
 	size_t	i;
