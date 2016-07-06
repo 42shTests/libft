@@ -79,3 +79,14 @@ char					*ft_printf_fill_s(t_printf_args *el, va_list ap)
 		return (ft_printf_fill_s_default(el, va_arg(ap, char *)));
 	return (NULL);
 }
+
+char					*ft_printf_array_fill_s(t_printf_args *el, void *ap,
+							int *index)
+{
+	(*index)++;
+	if (el->type == 'S' || el->si == 'l')
+		return (ft_printf_fill_s_long(el, *((wchar_t **)ap)));
+	else
+		return (ft_printf_fill_s_default(el, *((char **)ap)));
+	return (NULL);
+}

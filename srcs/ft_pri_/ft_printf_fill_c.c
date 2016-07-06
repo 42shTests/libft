@@ -100,3 +100,21 @@ char				*ft_printf_fill_c(t_printf_args *el, va_list ap)
 		str = ft_printf_fill_c_default(el, va_arg(ap, int));
 	return (str);
 }
+
+char				*ft_printf_array_fill_c(t_printf_args *el, void *ap,
+						int *index)
+{
+	char			*str;
+
+	(*index)++;
+	str = NULL;
+	if (el->type == 'C' || el->si == 'l')
+		str = ft_printf_fill_c_long(el, (wchar_t)(*((wint_t *)ap)));
+	else if (el->si == 'H')
+		str = ft_printf_fill_c_default(el, (char)(*((int *)ap)));
+	else if (el->si == 'h')
+		str = ft_printf_fill_c_default(el, (short)(*((int *)ap)));
+	else
+		str = ft_printf_fill_c_default(el, *((int *)ap));
+	return (str);
+}

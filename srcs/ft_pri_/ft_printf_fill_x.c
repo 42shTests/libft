@@ -41,3 +41,29 @@ char				*ft_printf_fill_x(t_printf_args *el, va_list ap)
 		str = ft_printf_fill_x_int(el, va_arg(ap, unsigned int));
 	return (str);
 }
+
+
+char				*ft_printf_array_fill_x(t_printf_args *el, void *ap,
+						int *index)
+{
+	char			*str;
+
+	(*index)++;
+	if (el->si == 'l' || el->type == ' ' || el->type == 'O')
+		str = ft_printf_fill_x_long(el, *((unsigned long *)ap));
+	else if (el->si == 'H')
+		str = ft_printf_fill_x_short(el,\
+			(unsigned char)(*((unsigned int *)ap)));
+	else if (el->si == 'h')
+		str = ft_printf_fill_x_short(el,\
+			(unsigned short)(*((unsigned int *)ap)));
+	else if (el->si == 'L')
+		str = ft_printf_fill_x_llong(el, *((unsigned long long *)ap));
+	else if (el->si == 'j')
+		str = ft_printf_fill_x_intmax(el, *((uintmax_t *)ap));
+	else if (el->si == 'z')
+		str = ft_printf_fill_x_intmax(el, *((size_t *)ap));
+	else
+		str = ft_printf_fill_x_int(el, *((unsigned int *)ap));
+	return (str);
+}

@@ -21,8 +21,10 @@ SRCS		=	ft_get_/get_next_line.c	\
 				ft_mem_/ft_memdup.c		\
 				ft_mem_/ft_realloc.c	\
 				ft_pri_/ft_printf.c		\
+				ft_pri_/ft_printf_array.c		\
 				ft_pri_/ft_printf_display.c\
 				ft_pri_/ft_printf_fill.c\
+				ft_pri_/ft_printf_array_fill.c\
 				ft_pri_/ft_printf_fill_default.c\
 				ft_pri_/ft_printf_fill_empty.c\
 				ft_pri_/ft_printf_fill_d.c\
@@ -334,6 +336,12 @@ $(DIROBJ)ft_printf.o: srcs/ft_pri_/ft_printf.c incs/libftprintf.h incs/libft.h
 		@printf "compiling ./srcs/ft_pri_/ft_printf.c\n"
 		@$(CC) -c ./srcs/ft_pri_/ft_printf.c -o ./.objs/ft_printf.o $(CPPFLAGS) $(CFLAGS) 
 
+$(DIROBJ)ft_printf_array.o: srcs/ft_pri_/ft_printf_array.c incs/libftprintf.h \
+  incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_array.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_array.c -o ./.objs/ft_printf_array.o $(CPPFLAGS) $(CFLAGS) 
+
 $(DIROBJ)ft_printf_display.o: srcs/ft_pri_/ft_printf_display.c incs/libftprintf.h \
   incs/libft.h
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
@@ -345,6 +353,12 @@ $(DIROBJ)ft_printf_fill.o: srcs/ft_pri_/ft_printf_fill.c incs/libftprintf.h \
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_pri_/ft_printf_fill.c\n"
 		@$(CC) -c ./srcs/ft_pri_/ft_printf_fill.c -o ./.objs/ft_printf_fill.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_printf_array_fill.o: srcs/ft_pri_/ft_printf_array_fill.c \
+  incs/libftprintf.h incs/libft.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_pri_/ft_printf_array_fill.c\n"
+		@$(CC) -c ./srcs/ft_pri_/ft_printf_array_fill.c -o ./.objs/ft_printf_array_fill.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_printf_fill_default.o: srcs/ft_pri_/ft_printf_fill_default.c \
   incs/libftprintf.h incs/libft.h

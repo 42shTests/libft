@@ -36,6 +36,7 @@ typedef struct				s_printf_args
 }							t_printf_args;
 
 int							ft_printf(char const *format, ...);
+int							ft_printf_array(char const *format, void **array);
 int							ft_printf_params(t_printf_params **params);
 char						*ft_printf_empty_string(void);
 void						ft_printf_exit_malloc(void);
@@ -51,6 +52,8 @@ int							ft_printf_return_free(t_printf_params *params,
 								t_printf_args *args, int ret);
 int							ft_printf_fill(t_printf_params **params,
 								t_printf_args *el, va_list ap);
+int							ft_printf_array_fill(t_printf_params **params,
+								t_printf_args *el, void *ap, int *index);
 void						ft_printf_conv_fmt(char const *fmt,
 								size_t *i,
 								size_t *j,
@@ -68,12 +71,26 @@ char						*ft_printf_strsuffix(char *str,
 char						*ft_printf_fill_default(t_printf_args *el);
 char						*ft_printf_fill_empty(t_printf_args *el, char c);
 char						*ft_printf_fill_d(t_printf_args *el, va_list ap);
+char						*ft_printf_array_fill_d(t_printf_args *el, void *ap,
+								int *index);
 char						*ft_printf_fill_b(t_printf_args *el, va_list ap);
+char						*ft_printf_array_fill_b(t_printf_args *el, void *ap,
+								int *index);
 char						*ft_printf_fill_u(t_printf_args *el, va_list ap);
+char						*ft_printf_array_fill_u(t_printf_args *el, void *ap,
+								int *index);
 char						*ft_printf_fill_s(t_printf_args *el, va_list ap);
+char						*ft_printf_array_fill_s(t_printf_args *el, void *ap,
+								int *index);
 char						*ft_printf_fill_c(t_printf_args *el, va_list ap);
+char						*ft_printf_array_fill_c(t_printf_args *el, void *ap,
+								int *index);
 char						*ft_printf_fill_x(t_printf_args *el, va_list ap);
+char						*ft_printf_array_fill_x(t_printf_args *el, void *ap,
+								int *index);
 char						*ft_printf_fill_o(t_printf_args *el, va_list ap);
+char						*ft_printf_array_fill_o(t_printf_args *el, void *ap,
+								int *index);
 char						*ft_printf_fill_p(t_printf_args *el,
 								unsigned long long n);
 char						*ft_printf_fill_s_long(t_printf_args *el,
