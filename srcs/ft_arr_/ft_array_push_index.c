@@ -9,18 +9,7 @@
 ** On success, the function returns the new size of the array.
 */
 
-static int	s_return_and_free(char **new_array, size_t total)
-{
-	while (total > 0)
-	{
-		total--;
-		ft_memdel((void **)&new_array[total]);
-	}
-	free(new_array);
-	return (-1);
-}
-
-static int	s_iterate_on_array(char **array, char ***new_array,
+static void	s_iterate_on_array(char **array, char ***new_array,
 						size_t index, size_t *total)
 {
 	size_t	i;
@@ -33,12 +22,10 @@ static int	s_iterate_on_array(char **array, char ***new_array,
 			(*new_array)[*total] = NULL;
 			(*total)++;
 		}
-		if (((*new_array)[*total] = ft_strdup(array[i])) == NULL)
-			return (-1);
+		(*new_array)[*total] = array[i];
 		(*total)++;
 		i++;
 	}
-	return (0);
 }
 
 int			ft_array_push_index(char ***array, char const *value,
@@ -55,18 +42,17 @@ int			ft_array_push_index(char ***array, char const *value,
 	if (index > total)
 		index = total;
 	if ((new_array = (char **)malloc(sizeof(char *) * (total + 2))) == NULL)
-		return (s_return_and_free(new_array, 0));
+		return (-1);
 	if (*array && total > 0)
 	{
 		total = 0;
-		if (s_iterate_on_array(*array, &new_array, index, &total) == -1)
-			return (s_return_and_free(new_array, total));
+		s_iterate_on_array(*array, &new_array, index, &total);
 	}
 	total = total == 0 ? 1 : total;
 	if ((new_array[index] = ft_strdup(value)) == NULL)
-		return (s_return_and_free(new_array, total));
+		return (-1);
 	new_array[total] = NULL;
-	ft_memdel_tab((void ***)&(*array));
+	free(*array);
 	*array = new_array;
 	return (total);
 }
