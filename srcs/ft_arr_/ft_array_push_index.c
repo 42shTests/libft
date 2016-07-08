@@ -10,20 +10,18 @@
 */
 
 static void	s_iterate_on_array(char **array, char ***new_array,
-						size_t index, size_t *total)
+						size_t index)
 {
 	size_t	i;
+	int		total;
 
 	i = 0;
+	total = 0;
 	while (array[i])
 	{
 		if (i == index)
-		{
-			(*new_array)[*total] = NULL;
-			(*total)++;
-		}
-		(*new_array)[*total] = array[i];
-		(*total)++;
+			(*new_array)[total++] = NULL;
+		(*new_array)[total++] = array[i];
 		i++;
 	}
 }
@@ -44,11 +42,8 @@ int			ft_array_push_index(char ***array, char const *value,
 	if ((new_array = (char **)malloc(sizeof(char *) * (total + 2))) == NULL)
 		return (-1);
 	if (*array && total > 0)
-	{
-		total = 0;
-		s_iterate_on_array(*array, &new_array, index, &total);
-	}
-	total = total == 0 ? 1 : total;
+		s_iterate_on_array(*array, &new_array, index);
+	total++;
 	if ((new_array[index] = ft_strdup(value)) == NULL)
 		return (-1);
 	new_array[total] = NULL;
