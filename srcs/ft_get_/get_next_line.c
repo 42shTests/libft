@@ -72,7 +72,7 @@ static void				gnl_getstr(t_gnl *gnl, char *stop)
 				return ;
 			ft_memmove(gnl->line, gnl->tmp, gnl->len_old);
 			ft_memmove(gnl->line + gnl->len_old, gnl->str, gnl->i);
-			ft_memdel((void *)&gnl->tmp);
+			ft_memdel((void **)&gnl->tmp);
 		}
 	}
 	else if (gnl->len > 0)
