@@ -60,6 +60,7 @@ SRCS	=	\
 			ft_arr_/ft_array_push_front.c		\
 			ft_arr_/ft_array_push_index.c		\
 			ft_ito_/ft_itoa.c					\
+			ft_ito_/ft_lltoa.c					\
 			ft_math_/ft_powi.c					\
 			ft_mem_/ft_memalloc.c				\
 			ft_mem_/ft_memdel.c					\
@@ -164,6 +165,7 @@ SRCS	=	\
 			recodes/ft_strcmp.c					\
 			recodes/ft_strncmp.c				\
 			recodes/ft_atoi.c					\
+			recodes/ft_atoll.c					\
 			recodes/ft_isalpha.c				\
 			recodes/ft_isdigit.c				\
 			recodes/ft_isalnum.c				\
